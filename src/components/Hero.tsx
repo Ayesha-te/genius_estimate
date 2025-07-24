@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  ArrowRight,
-  Play,
   CheckCircle,
   Calculator,
   Building,
@@ -13,44 +11,42 @@ import banner from '../assets/banner.jpg';
 const Hero = () => {
   return (
     <section className="bg-white text-[#0A1D37] overflow-hidden">
-      {/* Banner with gradient overlay and motto */}
+      {/* Banner with gradient overlay and animated text */}
       <div className="relative w-full h-[500px] sm:h-[600px] lg:h-[700px] overflow-hidden">
+        {/* Background Image */}
         <img
           src={banner}
           alt="Banner"
           className="w-full h-full object-cover brightness-90"
         />
-        <div className="absolute inset-0 bg-white/60 backdrop-brightness-75 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A1D37] leading-tight drop-shadow-lg">
-            Construction <span className="text-red-600">Estimating Services</span>
+
+        {/* Gradient Overlay with Opacity */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(220,38,38,0.75)] to-[rgba(253,224,71,0.75)] z-10" />
+
+        {/* Animated Text Content */}
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-4 animate-fadeInUp">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg">
+            Construction <span className="text-yellow-300">Estimating Services</span>
           </h1>
-          <p className="text-lg sm:text-xl text-[#0A1D37] opacity-90 mt-4 font-medium">
+          <p className="text-lg sm:text-xl text-white mt-4 font-medium drop-shadow-sm">
             Your Trusted Partner in Construction Takeoffs and Cost Estimation
           </p>
-          <p className="italic font-light text-gray-800 mt-2 text-sm sm:text-base">
+          <p className="italic font-light text-white mt-2 text-sm sm:text-base drop-shadow">
             “Precision in Every Square Foot — Speed in Every Estimate”
           </p>
 
-          {/* Action Buttons */}
-          <div className="flex gap-4 mt-6 flex-wrap justify-center">
-            <Link to="/contact">
-              <button className="bg-gradient-to-r from-red-600 to-yellow-500 text-white px-6 py-3 rounded-md font-semibold transition-all hover:scale-105">
-                Get Free Estimate
-              </button>
-            </Link>
-            <Link to="/samples">
-              <button className="border border-[#0A1D37] text-[#0A1D37] px-6 py-3 rounded-md font-semibold transition-all hover:scale-105 hover:bg-[#0A1D37] hover:text-white">
-                View Portfolio
-              </button>
-            </Link>
-          </div>
+          {/* CTA Button */}
+          <Link to="/contact">
+            <button className="mt-6 bg-white text-red-600 px-6 py-3 rounded-md font-semibold transition-all hover:scale-105 hover:bg-yellow-500 hover:text-white shadow">
+              Get Free Estimate
+            </button>
+          </Link>
         </div>
       </div>
 
-      {/* Description & Highlights */}
+      {/* Description & Highlights (unchanged) */}
       <div className="max-w-7xl mx-auto px-6 py-20 space-y-10">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
               Looking to boost your win rate and take the guesswork out of bidding? Genius Estimate is your trusted partner for construction estimating services and material takeoffs that are fast, accurate, and tailored to your project needs.
@@ -77,7 +73,6 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Right Highlight Box */}
           <div className="bg-gradient-to-r from-red-600 to-yellow-500 text-white p-8 rounded-xl shadow-xl space-y-6 transition-transform duration-300 hover:scale-105">
             <div className="flex justify-center">
               <div className="w-20 h-20 bg-white text-red-600 flex items-center justify-center rounded-full shadow-lg">

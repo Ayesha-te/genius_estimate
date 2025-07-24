@@ -30,47 +30,45 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full shadow z-50">
-      {/* Top Header Section */}
-      <div className="bg-white py-3">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between px-4 gap-2">
-          {/* Logo + Name */}
-          <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Logo" className="w-14 h-14 object-contain" />
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
-              <span className="text-red-500">Genius</span>
-              <span className="text-yellow-500"> Estimate</span>
-            </h1>
-          </Link>
-
-          {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-sm text-gray-700 font-medium">
-            <div className="flex items-center space-x-1">
-              <Phone className="w-4 h-4 text-red-500" />
+    <nav className="w-full z-50 shadow">
+      {/* Top Contact Bar */}
+      <div className="bg-gradient-to-r from-red-600 to-yellow-500 text-white text-sm font-medium">
+        <div className="max-w-6xl mx-auto px-4 py-2 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4" />
               <span>+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center space-x-1">
-              <Mail className="w-4 h-4 text-yellow-500" />
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4" />
               <span>info@geniousestimate.com</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Badge-Style Navbar Section */}
-      <div className="bg-gradient-to-r from-red-600 to-yellow-500 text-white">
-        <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-14 relative">
-          {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-4 text-sm font-medium">
-            <Link to="/" className={`px-3 py-1 rounded-full ${isActive("/") ? "bg-white text-red-600" : "hover:bg-white hover:text-red-600 transition"}`}>
-              Home
-            </Link>
+      {/* Main Navbar Section */}
+      <div className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={logo} alt="Logo" className="w-16 h-16 object-contain" />
+            <h1 className="text-2xl font-bold text-gray-800">
+              <span className="text-red-600">Genius</span>
+              <span className="text-yellow-500"> Estimate</span>
+            </h1>
+          </Link>
 
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-800">
+            <Link to="/" className={`${isActive("/") ? "text-red-600 font-semibold" : "hover:text-red-600"}`}>Home</Link>
+
+            {/* Trades Dropdown */}
             <div className="relative group">
-              <div className="flex items-center cursor-pointer px-3 py-1 rounded-full hover:bg-white hover:text-red-600 transition">
+              <div className="flex items-center cursor-pointer hover:text-red-600">
                 Trades <ChevronDown className="ml-1 w-4 h-4" />
               </div>
-              <div className="absolute top-full left-0 mt-2 bg-white text-gray-700 rounded-md shadow-md w-64 max-h-64 overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-30">
+              <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 rounded-md shadow-lg w-64 max-h-64 overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-30">
                 {trades.map(({ name, path }) => (
                   <Link key={path} to={path} className="block px-4 py-2 text-sm hover:bg-red-50 hover:text-red-600">
                     {name}
@@ -79,19 +77,15 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link to="/samples" className={`px-3 py-1 rounded-full ${isActive("/samples") ? "bg-white text-red-600" : "hover:bg-white hover:text-red-600 transition"}`}>
-              Samples
-            </Link>
+            <Link to="/samples" className={`${isActive("/samples") ? "text-red-600 font-semibold" : "hover:text-red-600"}`}>Samples</Link>
+            <Link to="/pricing" className={`${isActive("/pricing") ? "text-red-600 font-semibold" : "hover:text-red-600"}`}>Pricing</Link>
 
-            <Link to="/pricing" className={`px-3 py-1 rounded-full ${isActive("/pricing") ? "bg-white text-red-600" : "hover:bg-white hover:text-red-600 transition"}`}>
-              Pricing
-            </Link>
-
+            {/* About Dropdown */}
             <div className="relative group">
-              <div className="flex items-center cursor-pointer px-3 py-1 rounded-full hover:bg-white hover:text-red-600 transition">
+              <div className="flex items-center cursor-pointer hover:text-red-600">
                 About Us <ChevronDown className="ml-1 w-4 h-4" />
               </div>
-              <div className="absolute top-full left-0 mt-2 bg-white text-gray-700 rounded-md shadow-md w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-30">
+              <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 rounded-md shadow-lg w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-30">
                 {aboutLinks.map(({ name, path }) => (
                   <Link key={path} to={path} className="block px-4 py-2 text-sm hover:bg-red-50 hover:text-red-600">
                     {name}
@@ -100,22 +94,20 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link to="/contact" className={`px-3 py-1 rounded-full ${isActive("/contact") ? "bg-white text-red-600" : "hover:bg-white hover:text-red-600 transition"}`}>
-              Contact
+            <Link to="/contact" className={`${isActive("/contact") ? "text-red-600 font-semibold" : "hover:text-red-600"}`}>Contact</Link>
+
+            {/* Get Estimate Button (Desktop Only) */}
+            <Link
+              to="/contact"
+              className="ml-4 bg-gradient-to-r from-red-600 to-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+            >
+              Get Estimate
             </Link>
           </div>
 
-          {/* CTA Button */}
-          <Link
-            to="/contact"
-            className="hidden md:inline-block bg-white text-red-600 font-semibold px-5 py-1.5 rounded-full transition hover:bg-yellow-500 hover:text-white hover:scale-105"
-          >
-            Get Estimate
-          </Link>
-
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-700">
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -123,27 +115,28 @@ const Navbar = () => {
 
         {/* Mobile Dropdown */}
         {isOpen && (
-          <div className="md:hidden bg-white text-gray-800 px-4 py-3 space-y-2 font-medium text-sm">
-            <Link to="/" onClick={() => setIsOpen(false)} className="block py-1">Home</Link>
+          <div className="md:hidden bg-white px-4 py-4 space-y-2 text-sm text-gray-800">
+            <Link to="/" onClick={() => setIsOpen(false)} className="block">Home</Link>
 
             <details>
-              <summary className="cursor-pointer py-1">Trades</summary>
+              <summary className="cursor-pointer">Trades</summary>
               {trades.map(({ name, path }) => (
                 <Link key={path} to={path} onClick={() => setIsOpen(false)} className="block pl-4 py-1">{name}</Link>
               ))}
             </details>
 
-            <Link to="/samples" onClick={() => setIsOpen(false)} className="block py-1">Samples</Link>
-            <Link to="/pricing" onClick={() => setIsOpen(false)} className="block py-1">Pricing</Link>
+            <Link to="/samples" onClick={() => setIsOpen(false)} className="block">Samples</Link>
+            <Link to="/pricing" onClick={() => setIsOpen(false)} className="block">Pricing</Link>
 
             <details>
-              <summary className="cursor-pointer py-1">About Us</summary>
+              <summary className="cursor-pointer">About Us</summary>
               {aboutLinks.map(({ name, path }) => (
                 <Link key={path} to={path} onClick={() => setIsOpen(false)} className="block pl-4 py-1">{name}</Link>
               ))}
             </details>
 
-            <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-1">Contact</Link>
+            <Link to="/contact" onClick={() => setIsOpen(false)} className="block">Contact</Link>
+
             <Link to="/contact" onClick={() => setIsOpen(false)} className="block mt-2 text-center bg-gradient-to-r from-red-600 to-yellow-500 text-white px-4 py-2 rounded-full">
               Get Estimate
             </Link>
