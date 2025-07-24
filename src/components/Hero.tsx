@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Play, CheckCircle, Calculator, Building, FileText } from 'lucide-react';
 import banner from '../assets/banner.jpg';
 
@@ -22,13 +23,19 @@ const Hero = () => {
           <p className="italic font-light text-white mt-2 text-sm sm:text-base">
             “Precision in Every Square Foot — Speed in Every Estimate”
           </p>
+
+          {/* Action Buttons */}
           <div className="flex gap-4 mt-6 flex-wrap justify-center">
-            <button className="bg-gradient-to-r from-red-600 to-yellow-500 text-white px-6 py-3 rounded-md font-semibold transition-all hover:scale-105">
-              Get Free Estimate
-            </button>
-            <button className="border border-white text-white px-6 py-3 rounded-md font-semibold transition-all hover:scale-105 hover:bg-white hover:text-red-600">
-              View Portfolio
-            </button>
+            <Link to="/contact">
+              <button className="bg-gradient-to-r from-red-600 to-yellow-500 text-white px-6 py-3 rounded-md font-semibold transition-all hover:scale-105">
+                Get Free Estimate
+              </button>
+            </Link>
+            <Link to="/samples">
+              <button className="border border-white text-white px-6 py-3 rounded-md font-semibold transition-all hover:scale-105 hover:bg-white hover:text-red-600">
+                View Portfolio
+              </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -2,17 +2,17 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop'; // ✅ Correct import
 
+// Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Pricing from './pages/Pricing';
 import Blog from './pages/Blog';
 import Reviews from './pages/Reviews';
 import FAQ from './pages/FAQ';
-
-// Samples Page
 import SamplesPage from './pages/SamplesPage';
-
+import Contact from './pages/Contact'
 // Trade Pages
 import ConcreteEstimating from './pages/trades/Concrete-estimating';
 import Electrical from './pages/trades/electrical';
@@ -28,6 +28,9 @@ import WoodPlasticComposites from './pages/trades/wood-plastic-composites';
 function App() {
   return (
     <Router>
+      {/* ✅ must be INSIDE Router */}
+      <ScrollToTop />
+
       <div className="min-h-screen bg-white">
         <Navbar />
 
@@ -40,7 +43,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/samples" element={<SamplesPage />} />
-
+          <Route path="/Contact" element={<Contact />} />
           {/* Trade Estimating Pages */}
           <Route path="/trades/Concrete-estimating" element={<ConcreteEstimating />} />
           <Route path="/trades/electrical" element={<Electrical />} />

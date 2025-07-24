@@ -1,5 +1,6 @@
 import React from 'react';
 import { UploadCloud } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
   return (
@@ -87,11 +88,14 @@ const Pricing = () => {
           </ol>
           <p className="mt-4 text-[#e67e22] font-medium">🎯 No long-term contracts. Just fast, reliable, and affordable estimating services.</p>
 
-          {/* Upload Button */}
-          <button className="mt-6 bg-[#e67e22] text-white px-6 py-3 rounded-lg inline-flex items-center hover:bg-[#d35400] transition">
+          {/* Upload Button as Link */}
+          <Link
+            to="/contact"
+            className="mt-6 inline-flex items-center bg-[#e67e22] text-white px-6 py-3 rounded-lg hover:bg-[#d35400] transition"
+          >
             <UploadCloud className="mr-2" />
             Upload Plans Now
-          </button>
+          </Link>
         </div>
 
         {/* Contact Info */}

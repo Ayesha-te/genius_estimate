@@ -16,12 +16,7 @@ const Electrical = () => {
           <p className="mb-4">
             Our expert team of electrical estimators, engineers, industrial electronics professionals with diverse past experiences working with contractors, estimators, and electricians possess their expertise in delivering electrical takeoff software like PlanSwift, ConEst, Accubid, and Bluebeam. Their expertise in this industry benefits you in providing accurate and useful electrical estimates to win bids and elevate your project.
           </p>
-          <Link
-            to="/samples"
-            className="bg-yellow-500 text-gray-900 px-6 py-2 rounded font-semibold hover:bg-yellow-600 transition"
-          >
-            Watch our Electrical Estimating Sample
-          </Link>
+          
         </div>
       </section>
 
@@ -196,18 +191,10 @@ const Electrical = () => {
             <div>Fire Suppression</div>
           </div>
           <div className="flex flex-wrap gap-3 mt-4">
-            <Link to="/samples/low-voltage" className="bg-yellow-500 text-gray-900 px-6 py-2 rounded font-semibold hover:bg-yellow-600 transition">
-              View Our Low Voltage Sample
+            <Link to="/Samples" className="bg-yellow-500 text-gray-900 px-6 py-2 rounded font-semibold hover:bg-yellow-600 transition">
+              View Our Samples
             </Link>
-            <Link to="/samples/power-distribution" className="bg-yellow-500 text-gray-900 px-6 py-2 rounded font-semibold hover:bg-yellow-600 transition">
-              View Our Power Distribution Sample
-            </Link>
-            <Link to="/samples/residential" className="bg-yellow-500 text-gray-900 px-6 py-2 rounded font-semibold hover:bg-yellow-600 transition">
-              View Our Residential Sample
-            </Link>
-            <Link to="/samples/industrial" className="bg-yellow-500 text-gray-900 px-6 py-2 rounded font-semibold hover:bg-yellow-600 transition">
-              View Our Industrial Sample
-            </Link>
+            
           </div>
         </div>
       </section>
@@ -217,15 +204,7 @@ const Electrical = () => {
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Simple Process</h2>
           <ol className="list-decimal ml-6 text-gray-700 mb-4">
-            <li>
-              <strong>Upload your plans:</strong> Click here now to upload your schematic, bid set, and conceptual samples. Acceptable formats: PDF, TIFF, TIF, DXF, DWG, PLN, DWF, OSX, JPEG, JPG, CAL, CPC, DJVU.
-            </li>
-            <li>
-              <strong>Get a quote:</strong> Our team will send you a quote that includes the invoice, delivery date, and turnaround time, which can be paid through Credit Card, Debit Card, or PayPal.
-            </li>
-            <li>
-              <strong>Receive estimate:</strong> We will assist you in delivering the estimate comprising of man-hours, labor, and material pricing. We usually provide a professional bidding proposal with an inclusion sheet as per demand.
-            </li>
+            
           </ol>
         </div>
       </section>
@@ -238,7 +217,7 @@ const Electrical = () => {
             Just upload plans in the below link, we will review and send a quote in next 5 minutes:
           </p>
           <Link
-            to="/get-estimate"
+            to="/Contact"
             className="bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-600 transition"
           >
             Upload Plans

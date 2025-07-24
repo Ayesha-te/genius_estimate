@@ -34,7 +34,7 @@ const WoodPlasticComposites = () => {
           <p className="mb-4">
             Providing lumber takeoffs and estimates to all states of the United States, Canada, Australia, and the United Kingdom. We also service in other countries as per the demand of the client. So do not hesitate to contact us either you are out of States.
           </p>
-          <Link to="/get-estimate" className="text-blue-900 underline mb-4 block">For detailed takeoffs and estimates relevant to lumber, wood plastic composites click here.</Link>
+          <Link to="/Contact" className="text-blue-900 underline mb-4 block">For detailed takeoffs and estimates relevant to lumber, wood plastic composites click here.</Link>
           <span className="font-semibold block mb-2">Just upload plans in the below link, we will review and send a quote in next 5 minutes:</span>
           <Link to="/get-estimate" className="bg-red-600 text-white px-6 py-2 rounded font-semibold hover:bg-red-700 transition mb-6">Upload Plans</Link>
         </div>
@@ -73,10 +73,10 @@ const WoodPlasticComposites = () => {
             If you are planning to hire a construction project estimator, then World Estimating is the right option for you to choose!
           </p>
           <Link
-            to="/get-estimate"
+            to="/Contact"
             className="bg-white text-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Contact Us GET 30% OFF
+            Contact Us 
           </Link>
         </div>
       </section>

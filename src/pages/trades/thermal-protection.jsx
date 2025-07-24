@@ -43,7 +43,7 @@ const ThermalProtection = () => {
             <span className="font-semibold">Just upload plans in the below link, we will review and send a quote in next 5 minutes:</span>
           </div>
           <Link
-            to="/get-estimate"
+            to="/Contact"
             className="bg-red-600 text-white px-6 py-2 rounded font-semibold hover:bg-red-700 transition"
           >
             Upload Plans
@@ -135,23 +135,7 @@ const ThermalProtection = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-12 bg-gradient-to-r from-red-600 to-yellow-500 text-white text-center">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-4">What are you waiting for?</h2>
-          <p className="mb-4">
-            If you are planning to hire a construction project estimator, then World Estimating is the right option for you to choose!
-          </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Link
-              to="/get-estimate"
-              className="bg-white text-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Contact Us GET 30% OFF
-            </Link>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };

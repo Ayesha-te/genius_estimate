@@ -85,7 +85,7 @@ const MetalsEstimating = () => {
           </ul>
           <div className="flex gap-3 mt-2">
             <Link
-              to="/get-estimate"
+              to="/Contact"
               className="bg-red-600 text-white px-6 py-2 rounded font-semibold hover:bg-red-700 transition"
             >
               Upload Plans
@@ -323,13 +323,13 @@ const MetalsEstimating = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
-              to="/get-estimate"
+              to="/Contact"
               className="bg-white text-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Upload Plans
             </Link>
             <Link
-              to="/contact"
+              to="/Contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
             >
               Contact Us
@@ -345,7 +345,7 @@ const MetalsEstimating = () => {
           <div className="text-left max-w-3xl mx-auto">
             <h3 className="font-semibold mb-2">1. Submit your Plans</h3>
             <p>
-              <Link to="/get-estimate" className="text-blue-900 underline">
+              <Link to="/Contact" className="text-blue-900 underline">
                 Click here to upload your plans.
               </Link> We accept .PDF, .TIF, .TIFF, .DXF,. DWF, .DWG, .PLN, .JPG, JPEG, .CPC, .OSX, .DJVU, .CAL format and your plans can be Bid set, Schematic, Design Development, Construction document, or conceptual drawings.
             </p>
@@ -409,13 +409,13 @@ const MetalsEstimating = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
-              to="/get-estimate"
+              to="/Contact"
               className="bg-white text-red-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Your Estimate
             </Link>
             <Link
-              to="/contact"
+              to="/Contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
             >
               Contact Us

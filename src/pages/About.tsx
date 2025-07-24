@@ -322,13 +322,7 @@ const About = () => {
             give you the competitive advantage you need.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-semibold flex items-center justify-center space-x-2">
-              <span>Get Your Free Estimate</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-red-600 transition-all font-semibold">
-              Learn More About Our Process
-            </button>
+          
           </div>
         </div>
       </section>

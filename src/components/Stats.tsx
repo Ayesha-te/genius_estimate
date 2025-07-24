@@ -1,5 +1,9 @@
 import React from 'react';
-import { Users, Building, Trophy, Star, Calculator, FileText, Clock, Target, Globe, Award } from 'lucide-react';
+import {
+  Users, Building, Trophy, Star, Calculator, FileText, Clock,
+  Target, Globe, Award
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Stats = () => {
   const mainStats = [
@@ -35,7 +39,7 @@ const Stats = () => {
       description: "Complex infrastructure projects requiring detailed civil and structural estimates"
     },
     {
-      title: "Civic & Public Works", 
+      title: "Civic & Public Works",
       description: "Government and municipal projects with specialized requirements and compliance standards"
     },
     {
@@ -66,17 +70,16 @@ const Stats = () => {
 
   const serviceAreas = [
     "North America",
-    "Caribbean Region", 
+    "Caribbean Region",
     "Australian Regions"
   ];
 
   return (
     <section className="py-20 bg-gradient-to-r from-red-600 to-yellow-500 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            Numbers That Demonstrate Our Excellence
-          </h2>
+          <h2 className="text-4xl font-bold mb-4">Numbers That Demonstrate Our Excellence</h2>
           <p className="text-xl text-red-100 max-w-4xl mx-auto leading-relaxed">
             Our track record of success is reflected in the measurable results we've achieved for our clients 
             and the recognition we've received from the construction industry. These numbers represent real 
@@ -85,6 +88,7 @@ const Stats = () => {
           </p>
         </div>
 
+        {/* Stats Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {mainStats.map((stat, index) => (
             <div key={index} className="text-center group">
@@ -100,7 +104,7 @@ const Stats = () => {
           ))}
         </div>
 
-        {/* Recent Projects Section */}
+        {/* Recent Projects */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Recent Projects</h3>
@@ -108,7 +112,7 @@ const Stats = () => {
               We have successfully delivered estimates across diverse project types, demonstrating our versatility and expertise in all construction sectors.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {projectTypes.map((project, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
@@ -119,7 +123,7 @@ const Stats = () => {
           </div>
         </div>
 
-        {/* Service Areas Section */}
+        {/* Service Areas */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Our Service Areas</h3>
@@ -130,7 +134,7 @@ const Stats = () => {
               Our construction estimators offer construction estimating services to North America, the Caribbean region & Australian regions. Genious Estimate is having skilled construction estimators, material takeoff specialists, draftsmen, and project managers for your construction projects.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {serviceAreas.map((area, index) => (
               <div key={index} className="text-center">
@@ -143,18 +147,18 @@ const Stats = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        {/* CTA */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4">
-              CONTACT US & GET 30% OFF
-            </h3>
+            <h3 className="text-2xl font-bold mb-4">CONTACT US</h3>
             <p className="text-red-100 mb-6 leading-relaxed">
               So what are you waiting for? We are here for your help. We provide online estimating services as per your needs in our service areas. Join our growing community of successful contractors and experience the difference that accurate, professional estimates can make for your business.
             </p>
-            <button className="bg-white text-red-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-semibold">
-              Get Your 30% Discount Now
-            </button>
+            <Link to="/contact">
+              <button className="bg-white text-red-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-semibold">
+                Get Your Estimate now
+              </button>
+            </Link>
           </div>
         </div>
       </div>
