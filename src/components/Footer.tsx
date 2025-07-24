@@ -1,35 +1,56 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Linkedin,  Calculator } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Linkedin,
+} from 'lucide-react';
+import logo from '../assets/logo.png'; // ✅ Import logo
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-yellow-500 rounded-lg flex items-center justify-center">
-                <Calculator className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold">
+            {/* ✅ Bigger Logo and Company Name */}
+            <div className="flex items-center space-x-5">
+              <img
+                src={logo}
+                alt="Genius Estimate Logo"
+                className="w-20 h-20 object-contain"
+              />
+              <span className="text-3xl font-extrabold leading-tight">
                 <span className="text-red-400">Genius</span>
                 <span className="text-yellow-400"> Estimate</span>
               </span>
             </div>
+
             <p className="text-gray-300 leading-relaxed">
               Professional construction estimating services that help contractors win more bids 
               and complete projects profitably. Your success is our mission, and accuracy is our standard.
             </p>
+
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/share/15vbX4BqZz/" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors">
+              <a
+                href="https://www.facebook.com/share/15vbX4BqZz/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-             
-              <a href="https://www.linkedin.com/company/genius-estimate" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors">
+              <a
+                href="https://www.linkedin.com/company/genius-estimate"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-             
             </div>
           </div>
 
@@ -37,11 +58,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
-              <li><a href="/About" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="/Samples" className="text-gray-300 hover:text-white transition-colors">Portfolio</a></li>
-              <li><a href="/Testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="/Footer" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Portfolio</Link></li>
+              <li><Link to="/reviews" className="text-gray-300 hover:text-white transition-colors">Reviews</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -49,11 +70,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Material Takeoffs</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Cost Analysis</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Project Scheduling</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Value Engineering</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Risk Assessment</a></li>
+              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Material Takeoffs</Link></li>
+              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Cost Analysis</Link></li>
+              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Project Scheduling</Link></li>
+              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Value Engineering</Link></li>
+              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Risk Assessment</Link></li>
             </ul>
           </div>
 
@@ -80,15 +101,16 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © 2024 Genious Estimate. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
+              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</Link>
             </div>
           </div>
         </div>

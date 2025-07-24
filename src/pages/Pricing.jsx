@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 
 const Pricing = () => {
   return (
-    <div className="bg-[#FFBD9B]/10 text-gray-800 min-h-screen py-16 px-6">
+    <div className="bg-[#fff7f2] text-gray-800 min-h-screen py-16 px-6">
       <div className="max-w-5xl mx-auto space-y-12">
 
         {/* Header */}
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-[#ff7f50]">🚀 Pricing That Helps You <em className="italic text-gray-700">Bid More & Win More</em></h2>
+        <div className="text-center bg-gradient-to-r from-red-600 to-yellow-500 text-white rounded-2xl p-8 shadow-lg">
+          <h2 className="text-4xl font-bold">
+            🚀 Pricing That Helps You <em className="italic text-yellow-100">Bid More & Win More</em>
+          </h2>
           <p className="mt-4 text-lg">
             At <strong>Genius Estimate</strong>, we provide professional construction estimating and material takeoff services tailored to help contractors <strong>across the U.S. and U.K.</strong> win more bids and increase profitability.
           </p>
@@ -19,7 +21,7 @@ const Pricing = () => {
         </div>
 
         {/* Accuracy Section */}
-        <div className="bg-[#FFBD9B]/20 border border-[#FFBD9B]/50 rounded-2xl p-8">
+        <div className="bg-white border border-orange-200 rounded-2xl p-8">
           <h3 className="text-2xl font-semibold mb-4 text-[#d35400]">🎯 Accuracy You Can Rely On—Anywhere You Build</h3>
           <p className="mb-4">We understand that <em>accurate pricing is the backbone of successful project planning</em>, no matter where you are. That’s why we use:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -31,7 +33,7 @@ const Pricing = () => {
         </div>
 
         {/* Turnaround Section */}
-        <div className="bg-[#FFBD9B]/20 border border-[#FFBD9B]/50 rounded-2xl p-8">
+        <div className="bg-white border border-orange-200 rounded-2xl p-8">
           <h3 className="text-2xl font-semibold mb-4 text-[#d35400]">⚡ Quick Turnaround, No Matter the Scope</h3>
           <p className="mb-4">We pride ourselves on speed and efficiency:</p>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -42,8 +44,8 @@ const Pricing = () => {
           <p className="mt-2">No matter your location or time zone, we keep your bidding process moving.</p>
         </div>
 
-        {/* Pricing Transparency Section */}
-        <div className="bg-[#FFBD9B]/20 border border-[#FFBD9B]/50 rounded-2xl p-8">
+        {/* Pricing Transparency */}
+        <div className="bg-white border border-orange-200 rounded-2xl p-8">
           <h3 className="text-2xl font-semibold mb-4 text-[#d35400]">💸 Affordable & Transparent Pricing—No Surprises</h3>
           <p className="mb-4">
             We offer <em>some of the most competitive rates in the market</em>, thanks to our large team of skilled estimators. Whether you're a builder in <strong>Manchester</strong> or a contractor in <strong>Texas</strong>, we keep things simple:
@@ -56,7 +58,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Overview */}
-        <div className="bg-[#FFBD9B]/20 border border-[#FFBD9B]/50 rounded-2xl p-8">
+        <div className="bg-white border border-orange-200 rounded-2xl p-8">
           <h3 className="text-2xl font-semibold mb-4 text-[#d35400]">📦 General Pricing Overview</h3>
 
           <div className="mb-6">
@@ -77,21 +79,20 @@ const Pricing = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="bg-[#FFBD9B]/20 border border-[#FFBD9B]/50 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-semibold mb-4 text-[#d35400]">📥 Get a Custom Quote in Just Minutes</h3>
+        {/* CTA Section with Gradient */}
+        <div className="bg-gradient-to-r from-red-600 to-yellow-500 text-white rounded-2xl p-8 text-center shadow-lg">
+          <h3 className="text-2xl font-semibold mb-4">📥 Get a Custom Quote in Just Minutes</h3>
           <p className="mb-4">Here’s how to get started:</p>
-          <ol className="list-decimal pl-6 text-left max-w-lg mx-auto space-y-2 text-gray-700">
+          <ol className="list-decimal pl-6 text-left max-w-lg mx-auto space-y-2 text-white">
             <li><strong>Upload your project drawings</strong></li>
             <li><strong>Complete the short contact form</strong></li>
             <li><strong>Receive a tailored quote in 5 minutes</strong>—no obligation</li>
           </ol>
-          <p className="mt-4 text-[#e67e22] font-medium">🎯 No long-term contracts. Just fast, reliable, and affordable estimating services.</p>
+          <p className="mt-4 text-yellow-100 font-medium">🎯 No long-term contracts. Just fast, reliable, and affordable estimating services.</p>
 
-          {/* Upload Button as Link */}
           <Link
             to="/contact"
-            className="mt-6 inline-flex items-center bg-[#e67e22] text-white px-6 py-3 rounded-lg hover:bg-[#d35400] transition"
+            className="mt-6 inline-flex items-center bg-white text-red-700 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
           >
             <UploadCloud className="mr-2" />
             Upload Plans Now

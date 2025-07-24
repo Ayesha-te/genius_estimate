@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Play, CheckCircle, Calculator, Building, FileText } from 'lucide-react';
+import {
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Calculator,
+  Building,
+  FileText
+} from 'lucide-react';
 import banner from '../assets/banner.jpg';
 
 const Hero = () => {
@@ -13,14 +20,14 @@ const Hero = () => {
           alt="Banner"
           className="w-full h-full object-cover brightness-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-yellow-500/10 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg">
-            Construction <span className="text-yellow-200">Estimating Services</span>
+        <div className="absolute inset-0 bg-white/60 backdrop-brightness-75 flex flex-col justify-center items-center text-center px-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A1D37] leading-tight drop-shadow-lg">
+            Construction <span className="text-red-600">Estimating Services</span>
           </h1>
-          <p className="text-lg sm:text-xl text-white opacity-90 mt-4 font-medium">
+          <p className="text-lg sm:text-xl text-[#0A1D37] opacity-90 mt-4 font-medium">
             Your Trusted Partner in Construction Takeoffs and Cost Estimation
           </p>
-          <p className="italic font-light text-white mt-2 text-sm sm:text-base">
+          <p className="italic font-light text-gray-800 mt-2 text-sm sm:text-base">
             “Precision in Every Square Foot — Speed in Every Estimate”
           </p>
 
@@ -32,7 +39,7 @@ const Hero = () => {
               </button>
             </Link>
             <Link to="/samples">
-              <button className="border border-white text-white px-6 py-3 rounded-md font-semibold transition-all hover:scale-105 hover:bg-white hover:text-red-600">
+              <button className="border border-[#0A1D37] text-[#0A1D37] px-6 py-3 rounded-md font-semibold transition-all hover:scale-105 hover:bg-[#0A1D37] hover:text-white">
                 View Portfolio
               </button>
             </Link>

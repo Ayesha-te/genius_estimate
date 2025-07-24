@@ -144,7 +144,7 @@ const SamplesPage = () => {
               <button
                 style={{
                   marginTop: 20,
-                  backgroundColor: "#007bff",
+                  background: "linear-gradient(to right, #FFC107, #FF5722)", // Yellow to red gradient
                   color: "white",
                   border: "none",
                   padding: "10px 24px",
@@ -152,7 +152,8 @@ const SamplesPage = () => {
                   fontSize: 15,
                   fontWeight: "600",
                   cursor: "pointer",
-                  boxShadow: "0 4px 12px rgba(0,123,255,0.4)",
+                  boxShadow: "0 4px 12px rgba(255, 87, 34, 0.5)",
+                  transition: "background 0.3s ease",
                 }}
                 onClick={(e) => {
                   e.stopPropagation();

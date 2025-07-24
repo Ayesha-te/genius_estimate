@@ -44,7 +44,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    console.log(formData); // Replace with API call or email service logic
+    console.log(formData); // Replace with API call or email logic
   };
 
   const services = [
@@ -201,6 +201,7 @@ const Contact = () => {
                 </div>
               </div>
 
+              {/* Upload File Section */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Upload PDF / Project Files</label>
                 <input
@@ -208,7 +209,7 @@ const Contact = () => {
                   name="file"
                   accept=".pdf,.doc,.docx"
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2"
+                  className="block w-auto text-sm font-bold text-gray-700 file:mr-4 file:py-1.5 file:px-4 file:rounded-lg file:border-0 file:bg-yellow-400 file:text-red-800 hover:file:bg-yellow-500"
                 />
                 {formData.file && (
                   <p className="text-sm text-green-600 mt-1">Selected: {formData.file.name}</p>
