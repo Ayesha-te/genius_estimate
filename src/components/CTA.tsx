@@ -123,11 +123,7 @@ const CTA = () => {
               </h3>
               <p className="text-[#0A1D37]/70 mt-2">Let’s Begin Your Free Consultation</p>
             </div>
-            <p className="text-xl text-[#0A1D37]/70 leading-relaxed">
-              Local Pricing, Nationwide Accuracy — ZIP code–based cost data ensures spot-on estimates tailored to your project’s location. <br />
-              Save Up to 60% — Cut the cost of in-house estimators with our expert monthly packages—smart, scalable, and budget-friendly. <br />
-              Faster Bids = More Wins — Get reliable takeoffs in 24–48 hours and bid more projects with confidence.
-            </p>
+           
 
             <div className="space-y-4">
               {[{ icon: Phone, title: 'Call Us', detail: '+1 (555) 123-4567' },
