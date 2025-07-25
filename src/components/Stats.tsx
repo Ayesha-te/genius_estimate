@@ -11,25 +11,25 @@ const Stats = () => {
       icon: Users,
       number: "2500+",
       label: "Satisfied Clients",
-      description: "Construction professionals who trust our expertise and continue to rely on our estimating services"
+     
     },
     {
       icon: Building,
       number: "5000+",
       label: "Projects Completed",
-      description: "Successful estimates delivered across residential, commercial, and industrial construction projects"
+     
     },
     {
       icon: Trophy,
       number: "92%",
       label: "Bid Success Rate",
-      description: "Proven success rate in helping contractors win their bids and secure profitable projects"
+    
     },
     {
       icon: Star,
       number: "15+",
       label: "Years Experience",
-      description: "Decades of combined experience in construction estimating and project management"
+     
     }
   ];
 
@@ -70,8 +70,8 @@ const Stats = () => {
 
   const serviceAreas = [
     "North America",
-    "Caribbean Region",
-    "Australian Regions"
+    "United Kingdom",
+    "Australia"
   ];
 
   return (
@@ -79,12 +79,9 @@ const Stats = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Numbers That Demonstrate Our Excellence</h2>
+          <h2 className="text-4xl font-bold mb-4">Proven Results. Trusted by the Industry</h2>
           <p className="text-xl text-red-100 max-w-4xl mx-auto leading-relaxed">
-            Our track record of success is reflected in the measurable results we've achieved for our clients 
-            and the recognition we've received from the construction industry. These numbers represent real 
-            projects, real savings, and real success stories from contractors and builders who have trusted 
-            us with their most important estimates.
+          Our success speaks through real numbers, real savings, and real wins for contractors nationwide. Backed by industry recognition, we’ve helped clients secure more projects with confidence—delivering accurate estimates that drive results.
           </p>
         </div>
 
@@ -98,7 +95,7 @@ const Stats = () => {
                 </div>
                 <div className="text-4xl font-bold mb-2">{stat.number}</div>
                 <h3 className="text-xl font-semibold mb-4">{stat.label}</h3>
-                <p className="text-red-100 leading-relaxed">{stat.description}</p>
+               
               </div>
             </div>
           ))}
@@ -108,9 +105,7 @@ const Stats = () => {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Recent Projects</h3>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto">
-              We have successfully delivered estimates across diverse project types, demonstrating our versatility and expertise in all construction sectors.
-            </p>
+           
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -152,7 +147,7 @@ const Stats = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">CONTACT US</h3>
             <p className="text-red-100 mb-6 leading-relaxed">
-              So what are you waiting for? We are here for your help. We provide online estimating services as per your needs in our service areas. Join our growing community of successful contractors and experience the difference that accurate, professional estimates can make for your business.
+              So what are you waiting for? 
             </p>
             <Link to="/contact">
               <button className="bg-white text-red-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-semibold">

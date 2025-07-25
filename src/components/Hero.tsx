@@ -44,11 +44,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Description & Highlights (unchanged) */}
-      <div className="max-w-7xl mx-auto px-6 py-20 space-y-10">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-          <div className="space-y-6">
-            <p className="text-lg leading-relaxed">
+      {/* Info Section */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+          {/* Left Text Section */}
+          <div className="flex flex-col justify-between max-w-prose space-y-6">
+            <p className="text-lg leading-relaxed text-justify">
               Looking to boost your win rate and take the guesswork out of bidding? Genius Estimate is your trusted partner for construction estimating services and material takeoffs that are fast, accurate, and tailored to your project needs.
               With 15+ years of proven industry experience, we’ve helped contractors, builders, and developers across the U.S. land profitable jobs with confidence.
             </p>
@@ -61,19 +62,18 @@ const Hero = () => {
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2">
                   <CheckCircle className="text-yellow-500 w-5 h-5" />
-                  {item}
+                  <span className="text-base">{item}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               Our team uses Planswift, RSMeans, Bluebeam, and Xactimate, following AACE & American Estimators guidelines.
             </p>
-            <p className="text-gray-700">
-              We serve residential, commercial, and industrial projects globally.
-            </p>
+            
           </div>
 
-          <div className="bg-gradient-to-r from-red-600 to-yellow-500 text-white p-8 rounded-xl shadow-xl space-y-6 transition-transform duration-300 hover:scale-105">
+          {/* Right Box Section */}
+          <div className="bg-gradient-to-r from-red-600 to-yellow-500 text-white p-8 rounded-xl shadow-xl h-full self-stretch flex flex-col justify-between">
             <div className="flex justify-center">
               <div className="w-20 h-20 bg-white text-red-600 flex items-center justify-center rounded-full shadow-lg">
                 <Calculator className="w-8 h-8" />
@@ -85,18 +85,12 @@ const Hero = () => {
                 From concrete to MEP, our estimators deliver accurate material takeoffs and cost breakdowns.
               </p>
             </div>
-            <div className="flex justify-center gap-4 text-white">
+            <div className="flex justify-center gap-4 text-white pt-4">
               <Building className="w-8 h-8" />
               <FileText className="w-8 h-8" />
               <Calculator className="w-8 h-8" />
             </div>
           </div>
-        </div>
-
-        <div className="text-center pt-10">
-          <p className="text-lg font-semibold">
-            Have questions? Call us at <span className="text-red-600">+1 (555) 123-4567</span>
-          </p>
         </div>
       </div>
     </section>

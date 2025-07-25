@@ -8,7 +8,7 @@ const Testimonials = () => {
       name: "Raymond Eyi",
       position: "Developer",
       company: "EDEN LAND DEVELOPERS",
-      content: "Genious Estimate has been a valued part of our development team over the last few years...",
+      content: "Genius Estimate has been a valued part of our development team over the last few years...",
       rating: 5,
       image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
@@ -16,7 +16,7 @@ const Testimonials = () => {
       name: "Mike Rodriguez",
       position: "General Contractor",
       company: "Rodriguez Construction LLC",
-      content: "Working with Genious Estimate has transformed our bidding process completely...",
+      content: "Working with Genius Estimate has transformed our bidding process completely...",
       rating: 5,
       image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     },
@@ -24,7 +24,7 @@ const Testimonials = () => {
       name: "Sarah Johnson",
       position: "Project Manager",
       company: "Premier Commercial Builders",
-      content: "The accuracy of Genious Estimate's work is phenomenal...",
+      content: "The accuracy of Genius Estimate's work is phenomenal...",
       rating: 5,
       image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop"
     }
@@ -55,7 +55,7 @@ const Testimonials = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Don't just take our word for it. Here's what contractors, builders, and developers across the 
-            country have to say about their experience working with Genious Estimate...
+            country have to say about their experience working with Genius Estimate...
           </p>
         </div>
 

@@ -212,8 +212,12 @@ const Contact = () => {
                   className="block w-auto text-sm font-bold text-gray-700 file:mr-4 file:py-1.5 file:px-4 file:rounded-lg file:border-0 file:bg-yellow-400 file:text-red-800 hover:file:bg-yellow-500"
                 />
                 {formData.file && (
-                  <p className="text-sm text-green-600 mt-1">Selected: {formData.file.name}</p>
-                )}
+  <p className="text-sm text-green-600 mt-1">Selected: {formData.file.name}</p>
+)}
+<p className="text-sm text-gray-500 mt-2">
+  <strong>Note:</strong> If your file exceeds <span className="text-red-600 font-medium">2MB</span>, please upload it to your drive and share the link in the message field below.
+</p>
+
               </div>
 
               <div>

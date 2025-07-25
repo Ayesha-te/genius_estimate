@@ -56,31 +56,35 @@ const CTA = () => {
   return (
     <section className="py-20 bg-white text-[#0A1D37]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Estimating Services */}
-        <div className="mb-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Construction Cost Estimating Services</h2>
-            <p className="text-xl text-[#0A1D37]/70 max-w-4xl mx-auto leading-relaxed">
-              Our comprehensive estimating services cover all major construction sectors with tailored, accurate solutions.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {estimateTypes.map((type, i) => (
-              <div
-                key={i}
-                className="bg-[#FFBD9B]/20 border border-[#FFBD9B]/50 rounded-2xl p-8 hover:shadow-xl transition-all"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-[#FFBD9B] rounded-lg flex items-center justify-center mr-4">
-                    <type.icon className="w-6 h-6 text-[#0A1D37]" />
-                  </div>
-                  <h3 className="text-xl font-semibold">{type.title}</h3>
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent">
+            Construction Cost Estimating Services
+          </h2>
+          <p className="text-xl text-[#0A1D37]/70 max-w-4xl mx-auto leading-relaxed">
+            Our comprehensive estimating services cover all major construction sectors with tailored, <span className="bg-gradient-to-br from-yellow-500 to-yellow-600 bg-clip-text text-transparent font-semibold">Accurate</span> solutions built by <span className="bg-gradient-to-br from-red-500 to-red-700 bg-clip-text text-transparent font-semibold">Genius</span> experts.
+          </p>
+        </div>
+
+        {/* Estimate Types */}
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
+          {estimateTypes.map((type, i) => (
+            <div
+              key={i}
+              className="border border-yellow-100 bg-yellow-50/40 rounded-2xl p-8 hover:shadow-xl transition-all"
+            >
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg flex items-center justify-center mr-4">
+                  <type.icon className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-[#0A1D37]/80 leading-relaxed">{type.description}</p>
+                <h3 className="text-xl font-semibold bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent">
+                  {type.title}
+                </h3>
               </div>
-            ))}
-          </div>
+              <p className="text-[#0A1D37]/80 leading-relaxed">{type.description}</p>
+            </div>
+          ))}
         </div>
 
         {/* Public Sector Services */}
@@ -107,72 +111,32 @@ const CTA = () => {
           </div>
         </div>
 
-        {/* Estimates & Takeoffs */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          <div className="bg-[#FFBD9B]/20 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-6">Our Construction Estimates</h3>
-            <p className="text-[#0A1D37]/80 leading-relaxed mb-6">
-              We provide estimates in Excel/PDF formats using our template or yours. From residential to mechanical, we've got every trade covered.
-            </p>
-            <ul className="space-y-3 text-[#0A1D37]">
-              <li className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-[#0A1D37] rounded-full"></div>
-                <span>Excel & PDF formats available</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-[#FFBD9B] rounded-full"></div>
-                <span>Custom or client templates</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
-                <span>All trades covered</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-[#FFBD9B]/20 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold mb-6">Our Material Takeoffs</h3>
-            <p className="text-[#0A1D37]/80 leading-relaxed mb-6">
-              Our takeoffs include material, labor, manhours, and zip-code-based pricing for the most accurate budgeting possible.
-            </p>
-            <ul className="space-y-3 text-[#0A1D37]">
-              <li className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-[#0A1D37] rounded-full"></div>
-                <span>Material, labor & manhours included</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-[#FFBD9B] rounded-full"></div>
-                <span>Zip-code based pricing</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
-                <span>CSI format delivery</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Contact & Estimate Form */}
+        {/* Contact + Estimate */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contact Info */}
           <div className="space-y-8">
             <h2 className="text-4xl font-bold">
-              Ready to Get Accurate Estimates?
-              <span className="block text-[#FFBD9B]">Let’s Begin Your Free Consultation</span>
+              <span className="bg-gradient-to-br from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+                Genius
+             </span>{' '}
+              <span className="bg-gradient-to-br from-red-500 to-red-700 bg-clip-text text-transparent">
+                Estimates
+              </span>{' '}
+              to Help You Win
             </h2>
             <p className="text-xl text-[#0A1D37]/70 leading-relaxed">
-              Our team is ready to help you win more bids and reduce cost overruns with fast, accurate estimates.
+              Local Pricing, Nationwide Accuracy — ZIP code–based cost data ensures spot-on estimates tailored to your project’s location. <br />
+              Save Up to 60% — Cut the cost of in-house estimators with our expert monthly packages—smart, scalable, and budget-friendly. <br />
+              Faster Bids = More Wins — Get reliable takeoffs in 24–48 hours and bid more projects with confidence.
             </p>
 
             <div className="space-y-4">
-              {[
-                { icon: Phone, title: 'Call Us', detail: '+1 (555) 123-4567' },
-                { icon: Mail, title: 'Email Us', detail: 'info@geniousestimate.com' },
-                { icon: MapPin, title: 'Visit Us', detail: '123 Construction Plaza, Builder City' },
-              ].map((info, idx) => (
+              {[{ icon: Phone, title: 'Call Us', detail: '+1 (555) 123-4567' },
+              { icon: Mail, title: 'Email Us', detail: 'info@geniousestimate.com' },
+              { icon: MapPin, title: 'Visit Us', detail: '123 Construction Plaza, Builder City' }].map((info, idx) => (
                 <div key={idx} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-[#FFBD9B] rounded-lg flex items-center justify-center">
-                    <info.icon className="w-6 h-6 text-[#0A1D37]" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg flex items-center justify-center">
+                    <info.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-semibold">{info.title}</h4>
@@ -184,11 +148,17 @@ const CTA = () => {
           </div>
 
           {/* Estimate Form */}
-          <div className="bg-[#FFBD9B]/20 p-8 rounded-2xl">
-            <div className="flex items-center justify-center mb-6">
-              <Calculator className="w-8 h-8 text-[#0A1D37] mr-3" />
-              <h3 className="text-2xl font-bold">Get Your Free Estimate</h3>
+          <div className="bg-yellow-50 p-8 rounded-2xl">
+            {/* NEW CTA */}
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold">
+                Ready to Get You{' '}
+                <span className="text-yellow-600">Genius</span>{' '}
+                <span className="text-red-600">Estimates</span>?
+              </h3>
+              <p className="text-[#0A1D37]/70 mt-2">Let’s Begin Your Free Consultation</p>
             </div>
+
             <form className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <input placeholder="First Name *" className="input" />
@@ -204,7 +174,7 @@ const CTA = () => {
                 <option>Civil</option>
               </select>
               <textarea rows={4} placeholder="Project details..." className="input resize-none"></textarea>
-              <button className="w-full bg-[#0A1D37] text-white py-3 rounded-md hover:bg-[#061424] transition-all flex justify-center items-center gap-2">
+              <button className="w-full bg-gradient-to-br from-red-500 to-yellow-500 text-white py-3 rounded-md hover:opacity-90 transition-all flex justify-center items-center gap-2">
                 <span>Get My Free Estimate</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
