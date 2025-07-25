@@ -123,11 +123,11 @@ const Stats = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Our Service Areas</h3>
             <p className="text-xl text-red-100 mb-6">
-              Are you searching "estimating company near me"? We are at your service.
+              Are you searching "estimating company near me"?
+              <br />
+              <span className="font-semibold">We are at your service.</span>
             </p>
-            <p className="text-lg text-red-100 max-w-3xl mx-auto">
-              Our construction estimators offer construction estimating services to North America, the Caribbean region & Australian regions. Genious Estimate is having skilled construction estimators, material takeoff specialists, draftsmen, and project managers for your construction projects.
-            </p>
+            
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">

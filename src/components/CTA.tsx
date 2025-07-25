@@ -115,15 +115,14 @@ const CTA = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contact Info */}
           <div className="space-y-8">
-            <h2 className="text-4xl font-bold">
-              <span className="bg-gradient-to-br from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-                Genius
-             </span>{' '}
-              <span className="bg-gradient-to-br from-red-500 to-red-700 bg-clip-text text-transparent">
-                Estimates
-              </span>{' '}
-              to Help You Win
-            </h2>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold">
+                Ready to Get You{' '}
+                <span className="text-yellow-600">Genius</span>{' '}
+                <span className="text-red-600">Estimates</span>?
+              </h3>
+              <p className="text-[#0A1D37]/70 mt-2">Let’s Begin Your Free Consultation</p>
+            </div>
             <p className="text-xl text-[#0A1D37]/70 leading-relaxed">
               Local Pricing, Nationwide Accuracy — ZIP code–based cost data ensures spot-on estimates tailored to your project’s location. <br />
               Save Up to 60% — Cut the cost of in-house estimators with our expert monthly packages—smart, scalable, and budget-friendly. <br />
@@ -152,11 +151,9 @@ const CTA = () => {
             {/* NEW CTA */}
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold">
-                Ready to Get You{' '}
-                <span className="text-yellow-600">Genius</span>{' '}
-                <span className="text-red-600">Estimates</span>?
+                Get Your Free Estimate Now
               </h3>
-              <p className="text-[#0A1D37]/70 mt-2">Let’s Begin Your Free Consultation</p>
+             
             </div>
 
             <form className="space-y-6">
@@ -174,7 +171,10 @@ const CTA = () => {
                 <option>Civil</option>
               </select>
               <textarea rows={4} placeholder="Project details..." className="input resize-none"></textarea>
-              <button className="w-full bg-gradient-to-br from-red-500 to-yellow-500 text-white py-3 rounded-md hover:opacity-90 transition-all flex justify-center items-center gap-2">
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-br from-red-500 to-yellow-500 text-white py-3 rounded-md hover:opacity-90 transition-all flex justify-center items-center gap-2"
+              >
                 <span>Get My Free Estimate</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -182,6 +182,8 @@ const CTA = () => {
             <p className="text-xs text-center text-[#0A1D37]/70 mt-4">
               * Required fields. We respond within 24 hours.
             </p>
+
+            
           </div>
         </div>
       </div>
