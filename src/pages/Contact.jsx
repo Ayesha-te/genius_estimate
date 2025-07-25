@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, Globe, Award } from 'lucide-react';
+import { Send, CheckCircle } from 'lucide-react';
+
+const API_URL = "https://geniusestimate-backend-main.vercel.app/api/contact"; // <--- SET this to your backend deployment URL
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,6 +19,7 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked, files } = e.target;
@@ -41,10 +44,31 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    console.log(formData); // Replace with API call or email logic
+    setLoading(true);
+
+    const data = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      if (key === 'services') {
+        value.forEach((v) => data.append('services', v));
+      } else if (value) {
+        data.append(key, value);
+      }
+    });
+
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        body: data,
+      });
+
+      if (res.ok) setSubmitted(true);
+      else alert('Sending failed!');
+    } catch (err) {
+      alert('Error: ' + err.message);
+    }
+    setLoading(false);
   };
 
   const services = [
@@ -82,7 +106,7 @@ const Contact = () => {
               <p className="text-gray-600 mt-2">We’ll contact you within 2 hours.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Name *</label>
@@ -249,9 +273,10 @@ const Contact = () => {
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-red-600 to-yellow-500 text-white font-semibold px-6 py-3 rounded-lg flex items-center justify-center space-x-2"
+                disabled={loading}
               >
                 <Send className="w-4 h-4" />
-                <span>Submit Request</span>
+                <span>{loading ? "Sending..." : "Submit Request"}</span>
               </button>
 
               <p className="text-xs text-center text-gray-500">
