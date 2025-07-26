@@ -5,7 +5,7 @@ import {
 import { Link } from 'react-router-dom';
 
 // Import flag SVGs or PNGs from your assets folder
-import FlagUSA from '../assets/american.avif';
+import FlagUSA from '../assets/amer.png';
 import FlagUK from '../assets/uk.png';
 import FlagAustralia from '../assets/aus.png';
 
