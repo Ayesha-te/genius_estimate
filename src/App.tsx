@@ -24,7 +24,8 @@ import OpeningsEstimating from './pages/trades/openings-estimating';
 import SiteworkEstimating from './pages/trades/sitework-estimating';
 import ThermalProtection from './pages/trades/thermal-protection';
 import WoodPlasticComposites from './pages/trades/wood-plastic-composites';
-
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 function App() {
   return (
     <Router>
@@ -55,6 +56,10 @@ function App() {
           <Route path="/trades/sitework-estimating" element={<SiteworkEstimating />} />
           <Route path="/trades/thermal-protection" element={<ThermalProtection />} />
           <Route path="/trades/wood-plastic-composites" element={<WoodPlasticComposites />} />
+
+<Route path="/privacy-policy" element={<PrivacyPolicy />} />
+<Route path="/terms" element={<TermsAndConditions />} />
+          {/* Catch-all for 404 */}
         </Routes>
 
         <Footer />

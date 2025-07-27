@@ -51,14 +51,14 @@ const Hero = () => {
           <div className="flex flex-col justify-between max-w-prose space-y-6">
             <p className="text-lg leading-relaxed text-justify">
               Looking to boost your win rate and take the guesswork out of bidding? Genius Estimate is your trusted partner for construction estimating services and material takeoffs that are fast, accurate, and tailored to your project needs.
-              With 15+ years of proven industry experience, we’ve helped contractors, builders, and developers across the U.S. land profitable jobs with confidence.
+              With 10+ years of proven industry experience, we’ve helped contractors, builders, and developers across the U.S. land profitable jobs with confidence.
             </p>
             <ul className="grid sm:grid-cols-2 gap-4">
               {[
                 '92% Bid-Hit Ratio',
                 '24-48 Hour Turnaround',
                 'Certified Estimators',
-                '15 Years Experience',
+                '10 Years Experience',
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2">
                   <CheckCircle className="text-yellow-500 w-5 h-5" />

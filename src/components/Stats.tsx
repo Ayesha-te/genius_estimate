@@ -1,35 +1,35 @@
 import React from 'react';
 import {
-  Users, Building, Trophy, Star, Calculator, FileText, Clock,
-  Target, Globe, Award
+  Users, Building, Trophy, Star,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+// Import flag SVGs or PNGs from your assets folder
+import FlagUSA from '../assets/american.avif';
+import FlagUK from '../assets/uk.png';
+import FlagAustralia from '../assets/aus.png';
 
 const Stats = () => {
   const mainStats = [
     {
       icon: Users,
-      number: "2500+",
+      number: "1500+",
       label: "Satisfied Clients",
-     
     },
     {
       icon: Building,
       number: "5000+",
       label: "Projects Completed",
-     
     },
     {
       icon: Trophy,
       number: "92%",
       label: "Bid Success Rate",
-    
     },
     {
       icon: Star,
-      number: "15+",
+      number: "10+",
       label: "Years Experience",
-     
     }
   ];
 
@@ -68,10 +68,23 @@ const Stats = () => {
     }
   ];
 
+  // Flag images and country names
   const serviceAreas = [
-    "North America",
-    "United Kingdom",
-    "Australia"
+    {
+      name: "North America",
+      flag: FlagUSA,
+      alt: "USA Flag",
+    },
+    {
+      name: "United Kingdom",
+      flag: FlagUK,
+      alt: "UK Flag",
+    },
+    {
+      name: "Australia",
+      flag: FlagAustralia,
+      alt: "Australia Flag",
+    },
   ];
 
   return (
@@ -81,7 +94,7 @@ const Stats = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Proven Results. Trusted by the Industry</h2>
           <p className="text-xl text-red-100 max-w-4xl mx-auto leading-relaxed">
-          Our success speaks through real numbers, real savings, and real wins for contractors nationwide. Backed by industry recognition, we’ve helped clients secure more projects with confidence—delivering accurate estimates that drive results.
+            Our success speaks through real numbers, real savings, and real wins for contractors nationwide. Backed by industry recognition, we’ve helped clients secure more projects with confidence—delivering accurate estimates that drive results.
           </p>
         </div>
 
@@ -95,7 +108,6 @@ const Stats = () => {
                 </div>
                 <div className="text-4xl font-bold mb-2">{stat.number}</div>
                 <h3 className="text-xl font-semibold mb-4">{stat.label}</h3>
-               
               </div>
             </div>
           ))}
@@ -105,7 +117,6 @@ const Stats = () => {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Recent Projects</h3>
-           
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -118,7 +129,7 @@ const Stats = () => {
           </div>
         </div>
 
-        {/* Service Areas */}
+        {/* Service Areas with Flags */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">Our Service Areas</h3>
@@ -127,16 +138,15 @@ const Stats = () => {
               <br />
               <span className="font-semibold">We are at your service.</span>
             </p>
-            
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {serviceAreas.map((area, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                  <img src={area.flag} alt={area.alt} className="w-10 h-10 object-contain" />
                 </div>
-                <h4 className="text-xl font-semibold">{area}</h4>
+                <h4 className="text-xl font-semibold">{area.name}</h4>
               </div>
             ))}
           </div>
@@ -147,7 +157,7 @@ const Stats = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4">CONTACT US</h3>
             <p className="text-red-100 mb-6 leading-relaxed">
-              So what are you waiting for? 
+              So what are you waiting for?
             </p>
             <Link to="/contact">
               <button className="bg-white text-red-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105 font-semibold">

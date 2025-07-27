@@ -9,6 +9,19 @@ import {
 } from 'lucide-react';
 import logo from '../assets/logo.png'; // ✅ Import logo
 
+const trades = [
+  { name: "Concrete Estimating", path: "/trades/Concrete-estimating" },
+  { name: "Masonry Estimating", path: "/trades/masonry-estimating" },
+  { name: "Metals Estimating", path: "/trades/metals-estimating" },
+  { name: "Wood & Plastic Composites", path: "/trades/wood-plastic-composites" },
+  { name: "Thermal Protection", path: "/trades/thermal-protection" },
+  { name: "Sitework Estimating", path: "/trades/sitework-estimating" },
+  { name: "Openings Estimating", path: "/trades/openings-estimating" },
+  { name: "Interior & Exterior Finishes", path: "/trades/interior-exterior-finishes" },
+  { name: "Electrical", path: "/trades/electrical" },
+  { name: "MEP (HVAC)", path: "/trades/mep-hvac" },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white w-full">
@@ -66,15 +79,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Our Services & Trades */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
             <ul className="space-y-3">
-              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Material Takeoffs</Link></li>
-              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Cost Analysis</Link></li>
-              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Project Scheduling</Link></li>
-              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Value Engineering</Link></li>
-              <li><Link to="/samples" className="text-gray-300 hover:text-white transition-colors">Risk Assessment</Link></li>
+              {trades.map(({ name, path }) => (
+                <li key={path}>
+                  <Link to={path} className="text-gray-300 hover:text-white transition-colors">
+                    {name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -108,9 +123,8 @@ const Footer = () => {
               © 2024 Genious Estimate. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
-              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
-              <Link to="#" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</Link>
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

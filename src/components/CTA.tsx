@@ -1,185 +1,124 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import {
   ArrowRight,
   Phone,
   Mail,
   MapPin,
-  Calculator,
-  FileText,
-  Building,
-  Users,
 } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const CTA = () => {
-  const estimateTypes = [
-    {
-      icon: Building,
-      title: 'Commercial Estimating',
-      description:
-        'We understand that commercial estimates and takeoffs are very complex. Our estimators hold in-depth knowledge about commercial projects. Further, our pricing is cost-effective and accurate.',
-    },
-    {
-      icon: Users,
-      title: 'Residential Estimating',
-      description:
-        "We've been providing accurate residential estimates for years. Whether it's a single-family home or a multi-apartment building, we understand the full scope.",
-    },
-    {
-      icon: Calculator,
-      title: 'Industrial Estimating Services',
-      description:
-        'Our experts are skilled in structured estimating for industrial projects. We cater to the needs of the Process & Power industry, from units to complex plants.',
-    },
-    {
-      icon: FileText,
-      title: 'Civil Estimating Services',
-      description:
-        'Our experienced team delivers precise civil quantity takeoffs and estimates. We’ve helped plan and estimate large-scale infrastructure projects.',
-    },
-  ];
+  const formRef = useRef(null);
+  const location = useLocation();
 
-  const publicSectorProjects = [
-    'Lower Manhattan Development Corporation (LMDC)',
-    'US Embassy',
-    'US Air Force',
-    'Long Island Power Authority (LIPA)',
-    'US Navy',
-    'Metropolitan Transportation Authority (MTA)',
-    'Texas Parks and Wildlife Department (TPWD)',
-    'US Army',
-    'Environmental Protection Agency (CALEA)',
-    'Industrial Welfare Commission (IWC)',
-    'Florida Department of Transportation (DOT)',
-    'Florida Department of Highway Safety and Motor Vehicles (DHSMV)',
-  ];
+  // Scroll to form if hash is #estimate-form
+  useEffect(() => {
+    if (location.hash === "#estimate-form" && formRef.current) {
+      setTimeout(() => {
+        formRef.current.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location]);
 
   return (
     <section className="py-20 bg-white text-[#0A1D37]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent">
-            Construction Cost Estimating Services
-          </h2>
-          <p className="text-xl text-[#0A1D37]/70 max-w-4xl mx-auto leading-relaxed">
-            Our comprehensive estimating services cover all major construction sectors with tailored, <span className="bg-gradient-to-br from-yellow-500 to-yellow-600 bg-clip-text text-transparent font-semibold">Accurate</span> solutions built by <span className="bg-gradient-to-br from-red-500 to-red-700 bg-clip-text text-transparent font-semibold">Genius</span> experts.
-          </p>
-        </div>
-
-        {/* Estimate Types */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
-          {estimateTypes.map((type, i) => (
-            <div
-              key={i}
-              className="border border-yellow-100 bg-yellow-50/40 rounded-2xl p-8 hover:shadow-xl transition-all"
-            >
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg flex items-center justify-center mr-4">
-                  <type.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent">
-                  {type.title}
-                </h3>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-start gap-8 justify-center">
+        {/* Left Side Content */}
+        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start pt-8 pl-4">
+          <h3 className="text-4xl font-bold mb-3 text-center lg:text-left">
+            Ready to Get You{' '}
+            <span className="bg-gradient-to-r from-yellow-500 via-yellow-500 to-red-600 bg-clip-text text-transparent font-bold">Genius</span>{' '}
+            <span className="bg-gradient-to-r from-yellow-500 via-yellow-500 to-red-600 bg-clip-text text-transparent font-bold">Estimate</span>?
+          </h3>
+          <p className="text-xl text-[#5C6B82] mb-6 text-center lg:text-left">Let’s Begin Your Free Consultation</p>
+          <div className="space-y-5 w-full">
+            {/* Phone */}
+            <div className="flex items-center gap-4">
+              <span className="w-14 h-14 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#FF7F50] via-[#FFB347] to-[#FF4500]">
+                <Phone className="w-7 h-7 text-white" />
+              </span>
+              <div>
+                <div className="font-bold text-lg text-[#1D314F]">Call Us</div>
+                <div className="text-[#5C6B82] text-base">+1 (555) 123-4567</div>
               </div>
-              <p className="text-[#0A1D37]/80 leading-relaxed">{type.description}</p>
             </div>
-          ))}
-        </div>
-
-        {/* Public Sector Services */}
-        <div className="bg-[#0A1D37] text-white rounded-2xl p-10 lg:p-12 mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Public Sector Estimating Services</h3>
-            <p className="text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-              We offer expert estimating for public sector projects with compliance to federal guidelines and documentation.
-            </p>
-          </div>
-
-          <div className="mb-8">
-            <h4 className="text-2xl font-semibold mb-6 text-center">Our Pride Portfolio Includes:</h4>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {publicSectorProjects.map((p, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white/10 rounded-lg p-4 text-center hover:bg-white/20 transition"
-                >
-                  <p className="text-sm font-medium">{p}</p>
-                </div>
-              ))}
+            {/* Email */}
+            <div className="flex items-center gap-4">
+              <span className="w-14 h-14 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#FF7F50] via-[#FFB347] to-[#FF4500]">
+                <Mail className="w-7 h-7 text-white" />
+              </span>
+              <div>
+                <div className="font-bold text-lg text-[#1D314F]">Email Us</div>
+                <div className="text-[#5C6B82] text-base">info@geniousestimate.com</div>
+              </div>
+            </div>
+            {/* Location */}
+            <div className="flex items-center gap-4">
+              <span className="w-14 h-14 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#FF7F50] via-[#FFB347] to-[#FF4500]">
+                <MapPin className="w-7 h-7 text-white" />
+              </span>
+              <div>
+                <div className="font-bold text-lg text-[#1D314F]">Visit Us</div>
+                <div className="text-[#5C6B82] text-base">123 Construction Plaza, Builder City</div>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Contact + Estimate */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold">
-                Ready to Get You{' '}
-                <span className="text-yellow-600">Genius</span>{' '}
-                <span className="text-red-600">Estimates</span>?
-              </h3>
-              <p className="text-[#0A1D37]/70 mt-2">Let’s Begin Your Free Consultation</p>
-            </div>
-           
-
-            <div className="space-y-4">
-              {[{ icon: Phone, title: 'Call Us', detail: '+1 (555) 123-4567' },
-              { icon: Mail, title: 'Email Us', detail: 'info@geniousestimate.com' },
-              { icon: MapPin, title: 'Visit Us', detail: '123 Construction Plaza, Builder City' }].map((info, idx) => (
-                <div key={idx} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg flex items-center justify-center">
-                    <info.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">{info.title}</h4>
-                    <p className="text-[#0A1D37]/80">{info.detail}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Estimate Form */}
-          <div className="bg-yellow-50 p-8 rounded-2xl">
-            {/* NEW CTA */}
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold">
-                Get Your Free Estimate Now
-              </h3>
-             
-            </div>
-
+        {/* Right Side Form */}
+        <div ref={formRef} id="estimate-form" className="w-full lg:w-1/2 flex flex-col justify-center items-center">
+          <div className="w-full max-w-xl bg-[#FFFDEB] rounded-3xl px-10 py-10 shadow-lg">
+            <h3 className="text-3xl font-bold mb-8 text-center text-[#1D314F]">
+              Get Your Free Estimate Now
+            </h3>
             <form className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input placeholder="First Name *" className="input" />
-                <input placeholder="Last Name *" className="input" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  placeholder="First Name *"
+                  className="bg-transparent border-b border-[#E6E6E6] text-[#5C6B82] placeholder-[#5C6B82] px-2 py-3 outline-none focus:border-[#FF7F50] transition-all"
+                  required
+                />
+                <input
+                  placeholder="Last Name *"
+                  className="bg-transparent border-b border-[#E6E6E6] text-[#5C6B82] placeholder-[#5C6B82] px-2 py-3 outline-none focus:border-[#FF7F50] transition-all"
+                  required
+                />
               </div>
-              <input placeholder="Email Address *" className="input" />
-              <input placeholder="Company Name" className="input" />
-              <select className="input">
-                <option value="">Select Project Type</option>
-                <option>Residential</option>
-                <option>Commercial</option>
-                <option>Industrial</option>
-                <option>Civil</option>
-              </select>
-              <textarea rows={4} placeholder="Project details..." className="input resize-none"></textarea>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  placeholder="Email Address *"
+                  type="email"
+                  className="bg-transparent border-b border-[#E6E6E6] text-[#5C6B82] placeholder-[#5C6B82] px-2 py-3 outline-none focus:border-[#FF7F50] transition-all"
+                  required
+                />
+                <input
+                  placeholder="Company Name"
+                  className="bg-transparent border-b border-[#E6E6E6] text-[#5C6B82] placeholder-[#5C6B82] px-2 py-3 outline-none focus:border-[#FF7F50] transition-all"
+                />
+              </div>
+              <textarea
+                rows={2}
+                placeholder="Project details..."
+                className="bg-transparent border-b border-[#E6E6E6] text-[#5C6B82] placeholder-[#5C6B82] px-2 py-3 outline-none focus:border-[#FF7F50] transition-all w-full"
+              />
+              <div>
+                <select className="bg-transparent border-b border-[#E6E6E6] text-[#5C6B82] px-2 py-3 w-full outline-none appearance-none focus:border-[#FF7F50] transition-all">
+                  <option value="">Select Project Type</option>
+                  <option>Residential</option>
+                  <option>Commercial</option>
+                  <option>Industrial</option>
+                  <option>Civil</option>
+                </select>
+              </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-br from-red-500 to-yellow-500 text-white py-3 rounded-md hover:opacity-90 transition-all flex justify-center items-center gap-2"
+                className="w-full mt-2 py-4 rounded-lg text-white text-lg font-semibold bg-gradient-to-r from-[#FF3C2F] via-[#FFB347] to-[#FF7F50] hover:opacity-90 transition flex justify-center items-center gap-2"
               >
-                <span>Get My Free Estimate</span>
-                <ArrowRight className="w-5 h-5" />
+                Get My Free Estimate <ArrowRight className="w-5 h-5" />
               </button>
             </form>
-            <p className="text-xs text-center text-[#0A1D37]/70 mt-4">
+            <p className="text-xs text-center text-[#5C6B82] mt-4">
               * Required fields. We respond within 24 hours.
             </p>
-
-            
           </div>
         </div>
       </div>

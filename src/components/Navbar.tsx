@@ -98,7 +98,7 @@ const Navbar = () => {
 
             {/* Get Estimate Button (Desktop Only) */}
             <Link
-              to="/contact"
+              to="/#estimate-form"
               className="ml-4 bg-gradient-to-r from-red-600 to-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
             >
               Get Estimate
@@ -135,11 +135,13 @@ const Navbar = () => {
               ))}
             </details>
 
-            <Link to="/contact" onClick={() => setIsOpen(false)} className="block">Contact</Link>
 
-            <Link to="/contact" onClick={() => setIsOpen(false)} className="block mt-2 text-center bg-gradient-to-r from-red-600 to-yellow-500 text-white px-4 py-2 rounded-full">
-              Get Estimate
-            </Link>
+            <Link
+  to="/#estimate-form"
+  className="ml-4 bg-gradient-to-r from-red-600 to-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+>
+  Get Estimate
+</Link>
           </div>
         )}
       </div>
