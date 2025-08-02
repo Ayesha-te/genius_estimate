@@ -43,7 +43,6 @@ const ConcreteEstimating = () => {
         style={{ backgroundImage: `url(${ct})` }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
-
         <div
           className={`relative max-w-5xl mx-auto px-4 text-left z-10 transition-all duration-1000 ease-out ${
             animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
@@ -108,19 +107,18 @@ const ConcreteEstimating = () => {
               <h3 className="text-lg font-semibold text-red-700 mb-6">
                 OUR PORTFOLIO IN CONCRETE TAKEOFF SERVICES
               </h3>
-              <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+              <ul className="grid grid-cols-1 gap-4">
                 {portfolioItems.map((item, idx) => (
                   <li
                     key={idx}
-                    className="flex flex-col items-center space-y-2 text-center"
+                    className="flex items-center space-x-3"
                   >
-                    <CheckCircle className="text-yellow-500 w-6 h-6" />
+                    <CheckCircle className="text-yellow-500 w-6 h-6 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-
             <p className="mt-6 text-gray-700">
               From big construction companies to small businesses, we have served many general contractors, concrete contractors, asphalt contractors, foundation contractors, vendors, and pavers with the most accurate and highly detailed concrete estimating services and material takeoffs services.
             </p>
@@ -200,7 +198,7 @@ const ConcreteEstimating = () => {
         </p>
         <ul className="ml-6 text-gray-700 space-y-3">
           {[
-            "You don’t have to buy expensive software or hire dedicated staff.",
+            "You don't have to buy expensive software or hire dedicated staff.",
             "You save on the extra expenses of hiring a full-time estimator.",
             "It improves your bid volume and win ratio.",
             "Boosts efficiency and profit potential.",
