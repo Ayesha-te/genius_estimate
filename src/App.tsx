@@ -20,6 +20,7 @@ import Blog1 from './pages/blogs/blog1';
 import Blog2 from './pages/blogs/blog2';
 import Blog3 from './pages/blogs/blog3';
 import Blog4 from './pages/blogs/blog4';
+import Blog5 from './pages/blogs/blog5';
 
 // Trade Pages
 import ConcreteEstimating from './pages/trades/Concrete-estimating';
@@ -61,6 +62,7 @@ function App() {
           <Route path="/blogs/blog2" element={<Blog2 />} />
           <Route path="/blogs/blog3" element={<Blog3 />} />
           <Route path="/blogs/blog4" element={<Blog4 />} />
+          <Route path="/blogs/blog5" element={<Blog5 />} />
 
           {/* Trade Estimating Pages */}
           <Route path="/trades/Concrete-estimating" element={<ConcreteEstimating />} />

@@ -121,32 +121,37 @@ const Navbar = () => {
         {/* Mobile Dropdown */}
         {isOpen && (
           <div className="md:hidden bg-white px-4 py-4 space-y-2 text-sm text-gray-800">
-            <Link to="/" onClick={() => setIsOpen(false)} className="block">Home</Link>
+            <Link to="/" onClick={() => setIsOpen(false)} className="block font-semibold">Home</Link>
 
             <details>
-              <summary className="cursor-pointer">Trades</summary>
+              <summary className="cursor-pointer font-semibold">Trades</summary>
               {trades.map(({ name, path }) => (
                 <Link key={path} to={path} onClick={() => setIsOpen(false)} className="block pl-4 py-1">{name}</Link>
               ))}
             </details>
 
-            <Link to="/samples" onClick={() => setIsOpen(false)} className="block">Samples</Link>
-            <Link to="/pricing" onClick={() => setIsOpen(false)} className="block">Pricing</Link>
+            <Link to="/samples" onClick={() => setIsOpen(false)} className="block font-semibold">Samples</Link>
+            <Link to="/pricing" onClick={() => setIsOpen(false)} className="block font-semibold">Pricing</Link>
 
             <details>
-              <summary className="cursor-pointer">About Us</summary>
+              <summary className="cursor-pointer font-semibold">About Us</summary>
               {aboutLinks.map(({ name, path }) => (
                 <Link key={path} to={path} onClick={() => setIsOpen(false)} className="block pl-4 py-1">{name}</Link>
               ))}
             </details>
- <Link to="/contact" onClick={() => setIsOpen(false)} className="block">Contact</Link>
 
-            <Link
-  to="/contact"
-  className="ml-4 bg-gradient-to-r from-red-600 to-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
->
-  Get Estimate
-</Link>
+            <Link to="/contactus" onClick={() => setIsOpen(false)} className="block font-semibold">Contact</Link>
+
+            {/* Mobile Styled Get Estimate Button (Centered) */}
+            <div className="flex justify-center">
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className="block bg-gradient-to-r from-red-600 to-yellow-500 text-white px-4 py-2 rounded-full font-semibold hover:opacity-90 transition"
+              >
+                Get Estimate
+              </Link>
+            </div>
           </div>
         )}
       </div>

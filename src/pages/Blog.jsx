@@ -6,7 +6,7 @@ import c1 from '../assets/c1.jpg';
 import c2 from '../assets/c2.jpg';
 import c3 from '../assets/c3.jpg';
 import c4 from '../assets/c4.jpg';
-
+import c5 from '../assets/c5.jpg';
 const blogs = [
   {
     id: 1,
@@ -36,6 +36,13 @@ const blogs = [
     link: "/blogs/blog4",
     description: "Outsourced estimating services can cut your overhead costs by up to 60%.",
   },
+  {
+    id: 5,
+    title: "Estimating in a Post-Pandemic World: New Challenges & Strategies",
+    image: c5,
+    link: "/blogs/blog5",
+    description: "Explore the evolving landscape of construction estimating in the wake of COVID-19.",
+  }
 ];
 
 const Blog = () => {
