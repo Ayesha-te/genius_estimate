@@ -8,6 +8,7 @@ const CTA = () => {
   const location = useLocation();
   const [showAnimation, setShowAnimation] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   /* ─────────────────────────  Scroll to form if #estimate‑form in URL  ───────────────────────── */
   useEffect(() => {
@@ -21,6 +22,7 @@ const CTA = () => {
   /* ───────────────────────────  Submit handler  ─────────────────────────── */
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const form = e.target;
 
     const data = {
@@ -58,6 +60,7 @@ const CTA = () => {
       console.error(error);
       alert("Something went wrong. Please try again later.");
     }
+    setLoading(false);
   };
 
   // Clean Success Animation Modal
@@ -216,9 +219,10 @@ const CTA = () => {
               <button
                 type="submit"
                 className="col-span-1 md:col-span-2 mt-2 flex items-center justify-center bg-gradient-to-r from-yellow-500 to-red-600 text-white font-semibold py-3 rounded hover:opacity-90 transition"
+                disabled={loading}
               >
-                Send Request
-                <ArrowRight className="ml-2 w-5 h-5" />
+                {loading ? "Sending..." : "Send Request"}
+                {!loading && <ArrowRight className="ml-2 w-5 h-5" />}
               </button>
             </form>
             )}

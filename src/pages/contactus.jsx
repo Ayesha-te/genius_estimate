@@ -13,6 +13,7 @@ const contactus = () => {
 
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
 
   const handleChange = (e) => {
@@ -21,6 +22,7 @@ const contactus = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const res = await fetch("https://geniusestimate-backend-main.vercel.app/api/contact", {
@@ -45,6 +47,7 @@ const contactus = () => {
     } catch (err) {
       setError('Server error. Please try again later.');
     }
+    setLoading(false);
   };
 
   // Clean Success Animation Modal
@@ -159,8 +162,9 @@ const contactus = () => {
             <button
               type="submit"
               className="bg-[#e67e22] hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold"
+              disabled={loading}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
             {error && <p className="text-red-600">{error}</p>}
           </form>
