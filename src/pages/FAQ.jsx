@@ -308,8 +308,8 @@ const FAQ = () => {
                 <Phone className="w-8 h-8 text-red-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Call Us</h3>
                 <p className="text-gray-600 mb-4">Speak directly with our estimating experts</p>
-                <a href="tel:+15551234567" className="text-red-600 font-semibold hover:text-red-700">
-                  +1 (555) 123-4567
+                <a href="tel:+1 (919) 727-6105" className="text-red-600 font-semibold hover:text-red-700">
+                  +1 (919) 727-6105
                 </a>
               </div>
               

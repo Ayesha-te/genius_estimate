@@ -103,7 +103,7 @@ const Reviews = () => {
     "name": "Genius Estimate",
     "image": "https://geniusestimate.com/logo.png",
     "url": "https://geniusestimate.com",
-    "telephone": "+1-555-123-4567",
+    "telephone": "+1 (919) 727-6105",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Construction Plaza",

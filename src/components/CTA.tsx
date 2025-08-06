@@ -132,7 +132,7 @@ const CTA = () => {
                 </span>
                 <div>
                   <p className="font-bold text-lg">Call Us</p>
-                  <p className="text-[#5C6B82]">+1 (555) 123‑4567</p>
+                  <p className="text-[#5C6B82]">+1 (919) 727-6105</p>
                 </div>
               </li>
 
