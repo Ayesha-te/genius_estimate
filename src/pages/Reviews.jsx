@@ -106,10 +106,10 @@ const Reviews = () => {
     "telephone": "+1 (919) 727-6105",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Construction Plaza",
-      "addressLocality": "Builder City",
-      "addressRegion": "State",
-      "postalCode": "12345",
+      "streetAddress": "30 N Gould St Ste R, Sheridan, WY 82801",
+      "addressLocality": "Sheridan",
+      "addressRegion": "WY",
+      "postalCode": "82801",
       "addressCountry": "US"
     },
     "aggregateRating": {

@@ -153,7 +153,8 @@ const CTA = () => {
                 <div>
                   <p className="font-bold text-lg">Visit Us</p>
                   <p className="text-[#5C6B82]">
-                    123 Construction Plaza, Builder City
+                  30 N Gould St Ste R
+ Sheridan, WY 82801
                   </p>
                 </div>
               </li>
