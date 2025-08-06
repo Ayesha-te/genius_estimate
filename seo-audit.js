@@ -1,8 +1,8 @@
 // SEO Audit Script for Genius Estimate
 // Run this script to check SEO implementation
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 class SEOAuditor {
   constructor() {
