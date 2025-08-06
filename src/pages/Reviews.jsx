@@ -139,10 +139,34 @@ const Reviews = () => {
   return (
     <>
       <Helmet>
-        <title>Client Reviews & Testimonials | Genius Estimate</title>
-        <meta name="description" content="Read verified reviews from our satisfied clients. Our construction estimating services have helped contractors win 40% more bids with 99% accuracy and 24-hour turnaround times." />
-        <meta name="keywords" content="construction estimating reviews, construction takeoff testimonials, construction estimator feedback, customer reviews, contractor testimonials" />
+        <title>Client Reviews & Testimonials | 4.9/5 Rating | 150+ Reviews | Genius Estimate</title>
+        <meta name="description" content="⭐ Read 150+ verified reviews from satisfied clients. 4.9/5 rating! Our construction estimating services helped contractors win 40% more bids with 99% accuracy. See testimonials!" />
+        <meta name="keywords" content="construction estimating reviews, construction takeoff testimonials, construction estimator feedback, customer reviews, contractor testimonials, genius estimate reviews, construction estimating company reviews, verified customer testimonials, construction cost estimating reviews, 5 star construction estimator" />
         <link rel="canonical" href="https://geniusestimate.com/reviews" />
+        
+        <!-- Additional SEO Meta Tags -->
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="Genius Estimate" />
+        <meta name="publisher" content="Genius Estimate" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://geniusestimate.com/reviews" />
+        <meta property="og:title" content="Client Reviews & Testimonials | 4.9/5 Rating | Genius Estimate" />
+        <meta property="og:description" content="⭐ Read 150+ verified reviews from satisfied clients. 4.9/5 rating! Our construction estimating services helped contractors win 40% more bids with 99% accuracy." />
+        <meta property="og:image" content="https://geniusestimate.com/reviews-og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Genius Estimate Client Reviews and Testimonials" />
+        <meta property="og:site_name" content="Genius Estimate" />
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@geniusestimate" />
+        <meta name="twitter:url" content="https://geniusestimate.com/reviews" />
+        <meta name="twitter:title" content="Client Reviews & Testimonials | 4.9/5 Rating | Genius Estimate" />
+        <meta name="twitter:description" content="⭐ Read 150+ verified reviews from satisfied clients. 4.9/5 rating! Our construction estimating services helped contractors win 40% more bids." />
+        <meta name="twitter:image" content="https://geniusestimate.com/reviews-twitter-image.jpg" />
         
         {/* Schema.org markup for reviews */}
         <script type="application/ld+json">

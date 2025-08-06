@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://geniusestimate.com/sitemap.xml
+
+# Allow crawling of important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /pricing
+Allow: /reviews
+Allow: /contact
+Allow: /blog
+Allow: /faq
+Allow: /samples
+
+# Allow crawling of assets
+Allow: /assets/
+Allow: /pdfs/
+Allow: /blogs/
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
