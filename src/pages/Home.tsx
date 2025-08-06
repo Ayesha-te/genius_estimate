@@ -16,7 +16,7 @@ const Home = () => {
         <meta name="keywords" content="construction estimating services, construction takeoff services, material takeoff services, construction cost estimating, construction estimation company, accurate construction bids, professional construction estimator, construction cost calculator, building cost estimator, residential construction estimating, commercial construction estimating, MEP estimating services, electrical estimating, plumbing estimating, HVAC estimating, concrete estimating, roofing estimating, drywall estimating, construction bidding services, quantity surveying, construction project management, construction software, takeoff software, estimating software, construction consulting" />
         <link rel="canonical" href="https://geniusestimate.com/" />
         
-        <!-- Additional SEO Meta Tags -->
+        {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="author" content="Genius Estimate" />
         <meta name="publisher" content="Genius Estimate" />
@@ -24,7 +24,7 @@ const Home = () => {
         <meta name="geo.region" content="US" />
         <meta name="geo.placename" content="United States" />
         
-        <!-- Business Schema -->
+        {/* Business Schema */}
         <meta name="business:contact_data:phone_number" content="+1 (919) 727-6105" />
         <meta name="business:contact_data:website" content="https://geniusestimate.com" />
         
