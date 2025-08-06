@@ -38,7 +38,7 @@ const Footer = () => {
               "logo": "https://geniusestimate.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1 (555) 123-4567",
+                "telephone": "+1 (919) 727-6105",
                 "contactType": "customer service",
                 "availableLanguage": "English"
               },
@@ -48,10 +48,10 @@ const Footer = () => {
               ],
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Construction Plaza",
-                "addressLocality": "Builder City",
-                "addressRegion": "State",
-                "postalCode": "12345",
+                "streetAddress": "30 N Gould St Ste R",
+                "addressLocality": "Sheridan",
+                "addressRegion": "WY",
+                "postalCode": "82801",
                 "addressCountry": "US"
               }
             }
@@ -140,13 +140,13 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">123 Construction Plaza</p>
-                    <p className="text-gray-300">Builder City, State 12345</p>
+                    <p className="text-gray-300">30 N Gould St Ste R</p>
+                    <p className="text-gray-300">Sheridan, WY 82801</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-red-400 flex-shrink-0" />
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+1 (919) 727-6105</p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-red-400 flex-shrink-0" />

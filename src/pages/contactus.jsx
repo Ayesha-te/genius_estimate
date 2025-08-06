@@ -176,12 +176,12 @@ const contactus = () => {
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Office</h2>
           <p className="mb-3 text-gray-600">
             <strong>Address:</strong><br />
-            123 Main Street, Suite 101<br />
-            Los Angeles, CA, 90001
+            30 N Gould St Ste R<br />
+            Sheridan, WY, 82801
           </p>
           <p className="mb-3 text-gray-600">
             <strong>Phone:</strong><br />
-            +1 (123) 456-7890
+            +1 (919) 727-6105
           </p>
           <p className="mb-3 text-gray-600">
             <strong>Email:</strong><br />
@@ -190,7 +190,7 @@ const contactus = () => {
 
           <div className="mt-6">
             <iframe
-              src="https://maps.google.com/maps?q=Los%20Angeles&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=30%20N%20Gould%20St%20Ste%20R%2C%20Sheridan%2C%20WY%2082801&t=&z=13&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="250"
               className="rounded border"
