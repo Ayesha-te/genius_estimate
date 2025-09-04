@@ -176,8 +176,8 @@ const contactus = () => {
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Office</h2>
           <p className="mb-3 text-gray-600">
             <strong>Address:</strong><br />
-            30 N Gould St Ste R<br />
-            Sheridan, WY, 82801
+            113-C, Satellite Town<br />
+            Rahim Yar Khan, Punjab, Pakistan, 64200
           </p>
           <p className="mb-3 text-gray-600">
             <strong>Phone:</strong><br />
@@ -190,7 +190,7 @@ const contactus = () => {
 
           <div className="mt-6">
             <iframe
-              src="https://maps.google.com/maps?q=30%20N%20Gould%20St%20Ste%20R%2C%20Sheridan%2C%20WY%2082801&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=113-C%20Satellite%20Town%2C%20Rahim%20Yar%20Khan%2C%20Punjab%2C%20Pakistan%2C%2064200&t=&z=13&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="250"
               className="rounded border"

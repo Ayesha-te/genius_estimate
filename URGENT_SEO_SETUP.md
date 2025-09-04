@@ -67,7 +67,7 @@ Test these URLs work:
 2. Create/claim your business listing
 3. Add all details:
    - Business name: "Genius Estimate"
-   - Address: "30 N Gould St Ste R, Sheridan, WY 82801"
+   - Address: "113-C, Satellite Town, Rahim Yar Khan, Punjab, Pakistan, 64200"
    - Phone: "+1 (919) 727-6105"
    - Website: "https://geniusestimate.com"
    - Category: "Construction Company" or "Business Consultant"

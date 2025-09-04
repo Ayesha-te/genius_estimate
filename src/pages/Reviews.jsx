@@ -106,11 +106,11 @@ const Reviews = () => {
     "telephone": "+1 (919) 727-6105",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "30 N Gould St Ste R, Sheridan, WY 82801",
-      "addressLocality": "Sheridan",
-      "addressRegion": "WY",
-      "postalCode": "82801",
-      "addressCountry": "US"
+  "streetAddress": "113-C, Satellite Town, Rahim Yar Khan, Punjab, Pakistan, 64200",
+  "addressLocality": "Rahim Yar Khan",
+  "addressRegion": "Punjab",
+  "postalCode": "64200",
+  "addressCountry": "Pakistan"
     },
     "aggregateRating": {
       "@type": "AggregateRating",

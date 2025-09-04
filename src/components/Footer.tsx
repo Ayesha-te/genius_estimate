@@ -29,7 +29,7 @@ const Footer = () => {
       <Helmet>
         {/* This won't actually render in the footer, but including for completeness */}
         <script type="application/ld+json">
-          {`
+            {`
             {
               "@context": "https://schema.org",
               "@type": "Organization",
@@ -37,25 +37,28 @@ const Footer = () => {
               "url": "https://geniusestimate.com",
               "logo": "https://geniusestimate.com/logo.png",
               "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1 (919) 727-6105",
-                "contactType": "customer service",
-                "availableLanguage": "English"
+              "@type": "ContactPoint",
+              "telephone": "+1 (919) 727-6105",
+              "contactType": "customer service",
+              "availableLanguage": "English"
               },
               "sameAs": [
-                "https://www.facebook.com/share/15vbX4BqZz/",
-                "https://www.linkedin.com/company/genius-estimate"
+              "https://www.facebook.com/share/15vbX4BqZz/",
+              "https://www.linkedin.com/company/genius-estimate"
               ],
-              "address": {
+              "address": [
+              
+              {
                 "@type": "PostalAddress",
-                "streetAddress": "30 N Gould St Ste R",
-                "addressLocality": "Sheridan",
-                "addressRegion": "WY",
-                "postalCode": "82801",
-                "addressCountry": "US"
+                "streetAddress": "113-C, Satellite Town",
+                "addressLocality": "Rahim Yar Khan",
+                "addressRegion": "Punjab",
+                "postalCode": "64200",
+                "addressCountry": "PK"
               }
+              ]
             }
-          `}
+            `}
         </script>
       </Helmet>
       
@@ -140,8 +143,8 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">30 N Gould St Ste R</p>
-                    <p className="text-gray-300">Sheridan, WY 82801</p>
+                    <p className="text-gray-300">113-C, Satellite Town, Rahim Yar Khan</p>
+                    <p className="text-gray-300">  Punjab, Pakistan, 64200</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">

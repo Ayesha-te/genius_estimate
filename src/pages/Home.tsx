@@ -67,19 +67,7 @@ const Home = () => {
               "description": "Professional construction estimating and material takeoff services for residential and commercial projects with 99% accuracy rate and 24-48 hour turnaround time.",
               "foundingDate": "2020",
               "numberOfEmployees": "10-50",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "30 N Gould St Ste R",
-                "addressLocality": "Sheridan",
-                "addressRegion": "WY",
-                "postalCode": "82801",
-                "addressCountry": "USA"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "44.7966",
-                "longitude": "-106.9561"
-              },
+              // Address and geo fields fully removed as requested
               "sameAs": [
                 "https://www.facebook.com/geniusestimate",
                 "https://www.linkedin.com/company/genius-estimate",
