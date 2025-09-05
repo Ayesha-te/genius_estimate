@@ -153,8 +153,7 @@ const CTA = () => {
                 <div>
                   <p className="font-bold text-lg">Visit Us</p>
                   <p className="text-[#5C6B82]">
-                  113-C, Satellite Town
- Rahim Yar Khan, Punjab, Pakistan, 64200
+30 N Gould st ste R, Sheridan, WY, 82801, USA
                   </p>
                 </div>
               </li>

@@ -16,11 +16,11 @@ export const seoConfig = {
     phone: '+1 (919) 727-6105',
     email: 'info@geniusestimate.com',
     address: {
-  streetAddress: '113-C, Satellite Town',
-  addressLocality: 'Rahim Yar Khan',
-  addressRegion: 'Punjab',
-  postalCode: '64200',
-  addressCountry: 'Pakistan'
+  streetAddress: '30 N Gould st ste R',
+  addressLocality: 'Sheridan',
+  addressRegion: 'WY',
+  postalCode: '82801',
+  addressCountry: 'USA'
     },
     geo: {
       latitude: '44.7966',

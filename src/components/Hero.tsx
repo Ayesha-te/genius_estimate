@@ -38,11 +38,11 @@ const Hero = () => {
 ",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "113-C, Satellite Town",
-                "addressLocality": "Rahim Yar Khan",
-                "addressRegion": "Punjab",
-                "postalCode": "64200",
-                "addressCountry": "Pakistan"
+                "streetAddress": "30 N Gould st ste R",
+                "addressLocality": "Sheridan",
+                "addressRegion": "WY",
+                "postalCode": "82801",
+                "addressCountry": "USA"
               },
               "geo": {
                 "@type": "GeoCoordinates",

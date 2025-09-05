@@ -179,9 +179,18 @@ const contactus = () => {
             113-C, Satellite Town<br />
             Rahim Yar Khan, Punjab, Pakistan, 64200
           </p>
+           <p className="mb-3 text-gray-600">
+            <strong>Address:</strong><br />
+           30 N Gould st ste R<br />
+            Sheridan, WY, 82801
+          </p>
           <p className="mb-3 text-gray-600">
             <strong>Phone:</strong><br />
             +1 (919) 727-6105
+          </p>
+          <p className="mb-3 text-gray-600">
+            <strong>Phone:</strong><br />
+            +92-301-4841705
           </p>
           <p className="mb-3 text-gray-600">
             <strong>Email:</strong><br />
