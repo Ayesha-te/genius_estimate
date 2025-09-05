@@ -149,11 +149,18 @@ const Footer = () => {
                     <p className="text-gray-300">  Sheridan, WY, 82801</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-red-400 flex-shrink-0" />
-                  <p className="text-gray-300">+1 (919) 727-6105</p>
-                  <p className="text-gray-300">+92-301-4841705</p>
-                </div>
+                <div className="flex flex-col space-y-2">
+  <div className="flex items-center space-x-3">
+    <Phone className="w-5 h-5 text-red-400 flex-shrink-0" />
+    <p className="text-gray-300">+1 (919) 727-6105</p>
+  </div>
+
+  <div className="flex items-center space-x-3">
+    <Phone className="w-5 h-5 text-red-400 flex-shrink-0" />
+    <p className="text-gray-300">+92-301-4841705</p>
+  </div>
+</div>
+
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-red-400 flex-shrink-0" />
                   <p className="text-gray-300">sales@geniusestimate.com</p>
