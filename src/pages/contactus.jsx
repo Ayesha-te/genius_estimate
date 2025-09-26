@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Heart, Star, Sparkles, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
-const contactus = () => {
+const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,7 +35,6 @@ const contactus = () => {
         setShowAnimation(true);
         setTimeout(() => {
           setSuccess(true);
-          // Auto refresh after 2 seconds
           setTimeout(() => {
             window.location.reload();
           }, 2000);
@@ -50,36 +49,23 @@ const contactus = () => {
     setLoading(false);
   };
 
-  // Clean Success Animation Modal
   const SuccessAnimation = () => (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm">
       <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-sm mx-auto transform animate-bounce">
         <div className="text-center">
-          {/* Success icon */}
           <div className="relative mb-6">
             <div className="bg-orange-500 rounded-full p-4 mx-auto w-fit">
               <CheckCircle className="w-12 h-12 text-white" />
             </div>
           </div>
-          
-          {/* Success message */}
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            🎉 Message Sent!
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Your message has been sent successfully!
-          </p>
-          
-          {/* Simple loading dots */}
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">🎉 Message Sent!</h3>
+          <p className="text-gray-600 mb-4">Your message has been sent successfully!</p>
           <div className="flex items-center justify-center space-x-1 mb-4">
-            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0s'}}></div>
-            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{ animationDelay: '0s' }}></div>
+            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
           </div>
-          
-          <p className="text-sm text-gray-500">
-            We'll get back to you soon!
-          </p>
+          <p className="text-sm text-gray-500">We'll get back to you soon!</p>
         </div>
       </div>
     </div>
@@ -87,9 +73,7 @@ const contactus = () => {
 
   return (
     <div className="bg-white">
-      {/* Success Animation Modal */}
       {showAnimation && <SuccessAnimation />}
-      {/* Hero */}
       <div className="bg-[#e67e22] py-12 text-white text-center">
         <h1 className="text-4xl font-bold mb-2">Contact Us</h1>
         <p className="text-lg">Get in touch for quick estimates or inquiries.</p>
@@ -107,67 +91,17 @@ const contactus = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 p-3 rounded"
-            />
-            <input
-              type="text"
-              name="company"
-              placeholder="Your Company"
-              value={formData.company}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 p-3 rounded"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 p-3 rounded"
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full border border-gray-300 p-3 rounded"
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className="w-full border border-gray-300 p-3 rounded"
-            />
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 p-3 rounded"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-[#e67e22] hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold"
-              disabled={loading}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-            {error && <p className="text-red-600">{error}</p>}
-          </form>
+              <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required className="w-full border border-gray-300 p-3 rounded" />
+              <input type="text" name="company" placeholder="Your Company" value={formData.company} onChange={handleChange} required className="w-full border border-gray-300 p-3 rounded" />
+              <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required className="w-full border border-gray-300 p-3 rounded" />
+              <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded" />
+              <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} className="w-full border border-gray-300 p-3 rounded" />
+              <textarea name="message" rows="5" placeholder="Your Message" value={formData.message} onChange={handleChange} required className="w-full border border-gray-300 p-3 rounded"></textarea>
+              <button type="submit" className="bg-[#e67e22] hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold" disabled={loading}>
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+              {error && <p className="text-red-600">{error}</p>}
+            </form>
           )}
         </div>
 
@@ -176,21 +110,12 @@ const contactus = () => {
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Our Office</h2>
           <p className="mb-3 text-gray-600">
             <strong>Address:</strong><br />
-            113-C, Satellite Town<br />
-            Rahim Yar Khan, Punjab, Pakistan, 64200
-          </p>
-           <p className="mb-3 text-gray-600">
-            <strong>Address:</strong><br />
-           30 N Gould st ste R<br />
+            30 N Gould St Ste R<br />
             Sheridan, WY, 82801
           </p>
           <p className="mb-3 text-gray-600">
             <strong>Phone:</strong><br />
             +1 (919) 727-6105
-          </p>
-          <p className="mb-3 text-gray-600">
-            <strong>Phone:</strong><br />
-            +92-301-4841705
           </p>
           <p className="mb-3 text-gray-600">
             <strong>Email:</strong><br />
@@ -199,12 +124,13 @@ const contactus = () => {
 
           <div className="mt-6">
             <iframe
-              src="https://maps.google.com/maps?q=113-C%20Satellite%20Town%2C%20Rahim%20Yar%20Khan%2C%20Punjab%2C%20Pakistan%2C%2064200&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.609553057377!2d-106.9565!3d44.7978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x534d9319f2e0e86b%3A0x6c0e7c2a2c6f1a3!2s30%20N%20Gould%20St%20%23R%2C%20Sheridan%2C%20WY%2082801%2C%20USA!5e0!3m2!1sen!2sus!4v1697055667890!5m2!1sen!2sus"
               width="100%"
               height="250"
               className="rounded border"
               allowFullScreen=""
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               title="Google Map"
             ></iframe>
           </div>
@@ -214,4 +140,4 @@ const contactus = () => {
   );
 };
 
-export default contactus;
+export default ContactUs;

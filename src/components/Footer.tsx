@@ -143,8 +143,7 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">Pakistan: 113-C, Satellite Town, Rahim Yar Khan</p>
-                    <p className="text-gray-300">  Punjab, Pakistan, 64200</p>
+                    
                        <p className="text-gray-300">US: 30 N Gould st ste R</p>
                     <p className="text-gray-300">  Sheridan, WY, 82801</p>
                   </div>
@@ -155,10 +154,7 @@ const Footer = () => {
     <p className="text-gray-300">+1 (919) 727-6105</p>
   </div>
 
-  <div className="flex items-center space-x-3">
-    <Phone className="w-5 h-5 text-red-400 flex-shrink-0" />
-    <p className="text-gray-300">+92-301-4841705</p>
-  </div>
+ 
 </div>
 
                 <div className="flex items-center space-x-3">
